@@ -1,0 +1,551 @@
+body {
+  background-color: #ffffff;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.Main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+:root {
+  --heightvalue: 100vh;
+}
+
+div {
+  color: #898989
+}
+
+.Hr {
+  margin-left: 1vw;
+  width: 0.1vw;
+  height: 80vh;
+  background-color: #ececec;
+  margin-top: 15vh;
+
+  margin-right: 8vw;
+}
+
+.LeftMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18vw;
+  height: var(--heightvalue);
+  border-right-width: thin;
+  border-style: solid;
+  border-right-color: #ececec;
+}
+
+.UserText {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #898989;
+}
+
+
+.UserInformationBox {
+  margin-top: 120px;
+}
+
+.ChangeInfor {
+  width: 300px;
+  height: 40px;
+  background-color: #d2d2d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.DeleteAccount {
+  width: 300px;
+  height: 40px;
+  background-color: #d2d2d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.UserIconBox {
+  width: 120px;
+  height: 120px;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+}
+
+.ChangeInforText,
+.DeleteAccountText {
+  color: white;
+  font-size: 14px;
+}
+
+
+.RightMain {
+  width: 77.4vw;
+  height: var(--heightvalue);
+}
+
+.RightTop {
+  width: 77.4vw;
+  height: 15vh;
+}
+
+.RightBottom {
+  width: 77.4vw;
+  height: 85vh;
+  display: flex;
+}
+
+.RightTop_Top {
+  width: 77.4vw;
+  height: 6.7vh;
+  display: flex;
+  position: relative;
+}
+
+.RightTop_Bottom {
+  width: 77.4vw;
+  margin-top: 6.5vh;
+  height: 1.7vh;
+  /* background-color: #93F9B9; */
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+}
+
+.MenuList {
+  width: 4.5vw;
+  height: var(--heightvalue);
+  border-right-width: thin;
+  border-style: solid;
+  border-right-color: #ececec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.LinkedAccountText {
+  font-size: 22px;
+}
+
+.AccountCareText {
+  font-size: 14px;
+  margin-left: 26vw;
+}
+
+.StorageVolume {
+  font-size: 13px;
+}
+
+.GoogleDriveText {
+  font-weight: 600;
+}
+
+/* 대부분 텍스트 알쥐비: #898989에용!  */
+/* 검색창 뒷배경 #DCDCDC입니당! */
+
+.ProgressDiv {
+  margin-top: 1vh;
+
+  /* margin-bottom: 5px; */
+}
+
+progress {
+  appearance: none;
+}
+
+
+.ProgressA::-webkit-progress-bar {
+  width: 16vw;
+  height: 10px;
+  /* 채워지지 않은 부분의 색 */
+  background: #f0f0f0;
+
+  border-radius: 10px;
+  box-shadow: inset 0px 3px 10px #ccc;
+}
+
+.ProgressA::-webkit-progress-value {
+  border-radius: 10px;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);
+  background: linear-gradient(to right, #93F9B9, #1D976C);
+}
+
+.ProgressB::-webkit-progress-bar {
+  width: 20vw;
+  height: 10px;
+  /* 채워지지 않은 부분의 색 */
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: inset 0px 3px 10px #ccc;
+}
+
+.ProgressB::-webkit-progress-value {
+  border-radius: 10px;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);
+  background: linear-gradient(to right, #93F9B9, #1D976C);
+}
+
+.ProgressOnDrive::-webkit-progress-bar {
+  width: 20vw;
+  height: 10px;
+  /* 채워지지 않은 부분의 색 */
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: inset 0px 3px 10px #ccc;
+}
+
+.ProgressOnDrive::-webkit-progress-value {
+  border-radius: 10px;
+  background: #85A0FF;
+  background: -webkit-linear-gradient(to right, #85A0FF, #85A0FF);
+  background: linear-gradient(to right, #85A0FF, #7e97f3);
+}
+.ProgressMegaDrive::-webkit-progress-bar {
+  width: 20vw;
+  height: 10px;
+  /* 채워지지 않은 부분의 색 */
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: inset 0px 3px 10px #ccc;
+}
+
+.ProgressMegaDrive::-webkit-progress-value {
+  border-radius: 10px;
+  background: #FFD874;
+  background: -webkit-linear-gradient(to right, #FFD874, #FFD874);
+  background: linear-gradient(to right, #FFD874, #FFD874);
+}
+
+
+
+.LogoHr {
+  width: 4.2vw;
+  height: 1px;
+  background-color: #ececec;
+}
+
+.L {
+  width: 4.5vw;
+  height: 4.5vh;
+  margin-bottom: 2vh;
+}
+
+.MenuUserIcon {
+  margin-top: 8vh;
+}
+
+.MenuBiIcon {
+  background-color: #eeeeee;
+  border-radius: 15px;
+}
+
+
+.AllStorage {
+  height: 15vh;
+  width: 16vw;
+  border-bottom-width: thin;
+  border-style: solid;
+  border-bottom-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AllStorage_CloudBox {
+  width: 22vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.CloudBox {
+  width: 22vw;
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.CloudBoxUp {
+  display: flex;
+}
+
+.CloudBoxUpText {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(229, 229, 229); */
+  justify-content: space-around;
+  margin-left: 12px;
+}
+
+.Search {
+  width: 16vw;
+  height: 4vh;
+  border-radius: 40px;
+  background-color: #DCDCDC;
+  padding-left: 2.4vw;
+  border: 0px;
+  margin-left: 1.8vw;
+  margin-top: 2.7vh;
+}
+
+.InputDiv {
+  position: relative;
+}
+
+.SearchIcon {
+  position: absolute;
+  left: 2.5vw;
+  top: 3.8vh;
+}
+
+.UpLoadFile {
+  width: 7.5vw;
+  height: 4vh;
+  background-color: #F4F4F4;
+  position: absolute;
+  left: 68vw;
+  top: 2.8vh;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.UpLoadFileText {
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 2px;
+}
+
+.CloudUpperBox {
+  width: 25.7vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GoogleDriveCheckBox {
+  margin-left: 9vw; 
+  margin-top: 1.2vh;
+}
+
+.OnDriveCheckBox {
+  margin-left: 10vw;
+  margin-top: 1.2vh;
+}
+
+.MegaDriveCheckBox {
+  margin-left: 11vw;
+  margin-top: 1.2vh;
+}
+
+.Picture, .Document, .Video, .Music {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Picture {
+  margin-top: 5vh;
+}
+
+.Picture span, .Document span, .Video span, .Music span{
+  margin-left: 15px;
+}
+
+.Edit, .LatestOrder {
+  display: flex;
+  align-items: center;
+}
+
+.Edit span, .LatestOrder span{
+  margin-right: 3px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #898989;
+
+}
+
+.RightTop_Bottom_Menu {
+  width: 20vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ImageGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 7.2vw);
+  row-gap: 10px;
+  column-gap: 1vw;
+
+  padding: 1vw;
+
+  overflow: auto;
+
+  
+/* 여기서부턴 오른쪽 border 생성  */
+
+
+  border-right-width: thin;
+  border-style: solid;
+  border-right-color: #ececec;
+  
+}
+
+
+img {
+  width: 7.2vw;
+  height: 12vh;
+}
