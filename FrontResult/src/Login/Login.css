@@ -1,14 +1,18 @@
 .App {
   text-align: center;
 }
-.obserSpace{
+.L1{
   position: absolute;
   width: 599px;
   height: 327px;
   left: 234px;
   top: 347px;
 }
-.iconId{
+input{
+  font-size: 20px;
+  padding-left:10px;
+}
+.layoutId{
   position:absolute;
   width:58px;
   height:65px;
@@ -18,6 +22,12 @@
   border: 2px solid #DCDCDC;
   box-sizing: border-box;
 }
+.IconId{
+  position:absolute;
+  top: 0.9vh;
+  left: 0.3vw;
+}
+
 .loginId{
   position:absolute;
   width:442px;
@@ -28,7 +38,7 @@
   border: 2px solid #DCDCDC;
   box-sizing: border-box;
 }
-.iconPw{
+.layoutPw{
   position:absolute;
   width:58px;
   height:65px;
@@ -38,6 +48,12 @@
   border: 2px solid #DCDCDC;
   box-sizing: border-box;
 }
+.IconPw{
+  position:absolute;
+  top: 0.7vh;
+  left: 0.3vw;
+}
+
 .loginPw{
   position:absolute;
   width:442px;
