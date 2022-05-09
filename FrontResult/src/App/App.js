@@ -15,6 +15,7 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 import Main from '../Main/index';
 import styled from 'styled-components'
+import Login from '../Login';
 class Rr extends Component {
 
   constructor(props) {
@@ -88,8 +89,11 @@ class Rr extends Component {
           ShowOneDrive = {this.state.ShowOneDrive}
           ShowMegaDrive = {this.state.ShowMegaDrive}
           ></App>}></Route>
+          <Route path="/Login" element={<Login
+          
+          ></Login>}></Route>
       </Routes>
-    
+
     </BrowserRouter>
   )
   }

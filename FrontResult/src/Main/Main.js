@@ -24,7 +24,6 @@ import { Link } from 'react-router-dom'
 
 import style from 'styled-components'
 
-
 const ImageGridDiv = style.div`
     display:flex;
   flex-direction: column;

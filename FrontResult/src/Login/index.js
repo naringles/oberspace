@@ -1,3 +1,3 @@
-import Rr from './Login'
+import Login from './Login'
 
 export default Login

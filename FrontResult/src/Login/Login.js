@@ -1,13 +1,15 @@
-import oberSpace from './oberspace.jpg';
-import React, {useState} from 'react';
-import './App.css';
+import React, {useState,Component} from 'react';
+import './Login.css';
 import { AiFillLock,AiOutlineUser} from "react-icons/ai";
 
-function App() {
+class Login extends Component {
+render() {
   return (
     <div className="App">
       <div className="obserSpace">
-        <img src={ LogoImage }/>
+      <img className='L'
+          src={require('../LogoImage.jpeg')}
+      />
       </div>
 
       <div>
@@ -27,6 +29,6 @@ function App() {
       </div>
      </div>
   );
+};
 }
-
-export default App;
+export default Login;
