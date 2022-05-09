@@ -145,8 +145,6 @@ class Main extends Component {
                                         </input>
                                         <AiOutlineSearch size={20} color='gray'
                                             className='SearchIcon' />
-
-
                                     </div>
 
                                     <div className='UpLoadFile'>
