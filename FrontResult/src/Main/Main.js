@@ -140,7 +140,7 @@ class Main extends Component {
 
                                 <div className='RightTop_Top'>
                                     <div className='InputDiv'>
-                                        <input type="search"
+                                        <input type="search" placeholder="검색"
                                             className='Search'>
                                         </input>
                                         <AiOutlineSearch size={20} color='gray'
