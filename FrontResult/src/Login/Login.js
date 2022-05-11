@@ -1,6 +1,7 @@
 import React, {useState,Component} from 'react';
 import './Login.css';
 import { AiFillLock,AiOutlineUser} from "react-icons/ai";
+import {Route, Link} from 'react-router-dom';
 
 class Login extends Component {
 render() {
@@ -27,7 +28,9 @@ render() {
       <input type="submit" className="login" value="로그인"></input>
 
       <div className="join1">
-        <p> + 회원가입 </p>
+        <li>
+           <Link to = "/SignUp">회원가입</Link>
+        </li>
       </div>
      </div>
   );

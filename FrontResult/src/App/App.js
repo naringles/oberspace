@@ -16,6 +16,8 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Main from '../Main/index';
 import styled from 'styled-components'
 import Login from '../Login';
+import SignUp from '../SignUp/SignUp';
+
 class Rr extends Component {
 
   constructor(props) {
@@ -92,6 +94,9 @@ class Rr extends Component {
           <Route path="/Login" element={<Login
           
           ></Login>}></Route>
+          <Route path="/SignUp" element={<SignUp
+          
+          ></SignUp>}></Route>
       </Routes>
 
     </BrowserRouter>
