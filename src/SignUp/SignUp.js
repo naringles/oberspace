@@ -8,24 +8,18 @@ import {HiLockClosed} from "react-icons/hi";
 import {HiOutlineStar} from "react-icons/hi";
 import {HiMail} from "react-icons/hi";
 
-import SignUpModal from '../Modals/SignUpModal';
+import Modal from 'react-modal';
 
 //TODO
 //모달 창 오류, 아이콘 정렬, 회원가입 취소 버튼 추가
 
 function SignUp(){ 
-  const [signUpModalOn, setSignUpModalOn] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
-    
-  
+   
     <div className = "App">
       
         <img className = "logo" src = {osLogo} alt = 'osLogo'/> 
-      
-      <SignUpModal 
-            show={signUpModalOn} 
-            onHide={()=>setSignUpModalOn(false)} 
-      />
 
       <div className = "App-header">
 
@@ -77,23 +71,20 @@ function SignUp(){
            
         </div>
         <br/><br/><br/>
-
-        <button 
-            className="button-box" 
-            onClick={() => setSignUpModalOn(true)}> 
-            가입하기
-        </button>
         
-          
-      
+        <button className="button-box" onClick={() => setModalIsOpen(true)}> 가입하기</button>
+        <Modal size = "40" isOpen= {modalIsOpen} >
+           
+           가입 완료!
+            <button onClick={()=> setModalIsOpen(false)}>닫기</button>
+        </Modal>
         
         <br/><br/><br/><br/><br/>
-        
-
+      
      </div>
     </div>
   );
   
 }
-
+ Modal.setAppElement('#root');
 export default SignUp;
