@@ -13,6 +13,32 @@ import Modal from 'react-modal';
 //TODO
 //모달 창 오류, 아이콘 정렬, 회원가입 취소 버튼 추가
 
+const ModalStyle = {
+	overlay: {
+		position: "fixed",
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0,
+		backgroundColor: "rgba(255, 255, 255, 0.45)",
+		zIndex: 10,
+	},
+	content: {
+		display: "flex",
+		justifyContent: "center",
+		background: "#ffffff",
+		overflow: "auto",
+		top: "42vh",
+		left: "38vw",
+		right: "38vw",
+		bottom: "42vh",
+		WebkitOverflowScrolling: "touch",
+		borderRadius: "14px",
+		outline: "none",
+		zIndex: 10,
+	},
+};
+
 function SignUp(){ 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
@@ -73,10 +99,10 @@ function SignUp(){
         <br/><br/><br/>
         
         <button className="button-box" onClick={() => setModalIsOpen(true)}> 가입하기</button>
-        <Modal size = "40" isOpen= {modalIsOpen} >
-           
+        <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
            가입 완료!
-            <button onClick={()=> setModalIsOpen(false)}>닫기</button>
+           <br/><br/>
+            <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
         </Modal>
         
         <br/><br/><br/><br/><br/>
@@ -86,5 +112,6 @@ function SignUp(){
   );
   
 }
- Modal.setAppElement('#root');
+
+Modal.setAppElement('#root');
 export default SignUp;
