@@ -56,4 +56,11 @@
   font-style: #FFFFFF;
 }
 
+.modal-button{
+  width : 5vh;
+  height : 2vh;
+  border :0;
+  outline: 0;
+  background-color: #DCDCDC;
+}
 
