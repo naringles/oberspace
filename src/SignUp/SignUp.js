@@ -9,6 +9,7 @@ import {HiOutlineStar} from "react-icons/hi";
 import {HiMail} from "react-icons/hi";
 
 import Modal from 'react-modal';
+import {Route, Link} from 'react-router-dom';
 
 //TODO
 //모달 창 오류, 아이콘 정렬, 회원가입 취소 버튼 추가
@@ -102,7 +103,9 @@ function SignUp(){
         <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
            가입 완료!
            <br/><br/>
-            <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
+           <Link to = "/">
+               <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
+            </Link>
         </Modal>
         
         <br/><br/><br/><br/><br/>
