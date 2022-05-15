@@ -102,8 +102,7 @@ function SignUp(){
         <button className="button-box" onClick={() => setModalIsOpen(true)}> 가입하기</button>
         <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
            가입 완료!
-           <br/><br/>
-           <Link to = "/">
+           <Link to = "/Login">
                <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
             </Link>
         </Modal>
