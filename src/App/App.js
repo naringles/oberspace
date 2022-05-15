@@ -17,6 +17,7 @@ import Main from '../Main/index';
 import styled from 'styled-components'
 import Login from '../Login';
 import SignUp from '../SignUp/SignUp';
+import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 
 class Rr extends Component {
 
@@ -26,7 +27,10 @@ class Rr extends Component {
         test: false,
         ShowGoogleDrive: true,
         ShowOneDrive: true,
-        ShowMegaDrive: true
+        ShowMegaDrive: true,
+        one: true,
+        two: true,
+        three: true
     };
 }
 
@@ -104,6 +108,23 @@ class Rr extends Component {
   }
 }
 
+//DROP
+
+const SelectBox = (props) => {
+	return (
+		<select>
+			{props.options.map((option) => (
+				<option
+					key={option.value}
+					value={option.value}
+				>
+					{option.name}
+				</option>
+			))}
+		</select>
+	);
+};
+
 const LeftMain = styled.div`
 display: flex;
 flex-direction: column;
@@ -169,12 +190,7 @@ class App extends Component {
 
           <div className="RightMain">
             <div className='Right1'>
-              <span className='LinkedAccountText'>연결된 계정</span>
-              <span className='AccountCareText'>계정 관리
-              <AiOutlineDown size='12'/>
-              </span>
             </div>
-
 
             {this.props.ShowGoogleDrive == true ? 
             <div className='CloudBox'>
@@ -185,22 +201,26 @@ class App extends Component {
               </div>
 
               <div className='CloudBoxUpText'>
-                <span className='GoogleDriveText'>google drive</span>
+                <div className='GoogleDriveText'>google drive
+                <span className ="GoogleDriveDel"
+                  onClick={()=>{
+                    this.setState({
+                            one: false
+                    })
+                  }}>삭제</span>
+                </div>
                 <span>string</span>
-              </div>
-
-
+                
+              </div> 
             </div>
 
             <div className='ProgressDiv'>
               <progress value="50" max="80" className='Progress'/>
             </div>
-
             <span className='StorageVolume'>50GB / 80GB</span>
 
           </div>
             :
-            
             null}
             
 
@@ -213,10 +233,16 @@ class App extends Component {
               </div>
 
               <div className='CloudBoxUpText'>
-                <span className='GoogleDriveText'>One drive</span>
+              <div className='GoogleDriveText'>One drive
+                <span className ="OneDriveDel"
+                  onClick={()=>{
+                    this.setState({
+                            two: false
+                    })
+                  }}>삭제</span>
+                </div>
                 <span>string</span>
               </div>
-
 
             </div>
 
@@ -238,10 +264,16 @@ class App extends Component {
               </div>
 
               <div className='CloudBoxUpText'>
-                <span className='GoogleDriveText'>Mega drive</span>
+              <div className='GoogleDriveText'>Mega drive
+                <span className ="MegaDriveDel"
+                  onClick={()=>{
+                    this.setState({
+                            one: false
+                    })
+                  }}>삭제</span>
+                </div>
                 <span>string</span>
               </div>
-
 
             </div>
 

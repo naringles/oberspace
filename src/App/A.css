@@ -150,7 +150,22 @@ div {
 }
 /* 대부분 텍스트 알쥐비: #898989에용!  */
 /* 검색창 뒷배경 #DCDCDC입니당! */
-  
+
+.GoogleDriveDel{
+  margin-left: 9vw; 
+  margin-top: 1.2vh;
+}
+
+.OneDriveDel{
+  margin-left: 9vw; 
+  margin-top: 1.3vh;
+}
+
+.MegaDriveDel {
+  margin-left: 9vw;
+  margin-top: 1.4vh;
+}
+
 .ProgressDiv {
   margin-bottom: 5px;
 }
