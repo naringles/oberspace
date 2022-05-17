@@ -187,13 +187,8 @@ class Main extends Component {
 
                                         <div className='GoogleDriveCheckBox'>
                                             <input className='' type='Checkbox'/>
-                                            <span
-                                            onClick={()=>{
-                                                this.setState({
-                                                    one: false
-                                                })
-                                            }}
-                                            >삭제</span>
+                                            
+                                            <span> 전체선택</span>
 
                                         </div>
 
@@ -204,7 +199,6 @@ class Main extends Component {
                                     </div>
 
                                     <span className='StorageVolume'>50GB / 80GB</span>
-
                                 </div>
 
                                 <div className='ImageGrid'>
@@ -314,12 +308,7 @@ class Main extends Component {
                                          </div>
                                          <div className='OnDriveCheckBox'>
                                              <input className='' type='Checkbox'/>
-                                             <span 
-                                             onClick={()=>{
-                                                 this.setState({
-                                                     two: false
-                                                 })
-                                             }}>삭제</span>
+                                             <span> 전체선택</span>
                                          </div>
 
 

@@ -125,6 +125,33 @@ const SelectBox = (props) => {
 	);
 };
 
+const useConfirm = (message = null, onConfirm, onCancel) => {
+  if (!onConfirm || typeof onConfirm !== "function") {
+    return;
+  }
+  if (onCancel && typeof onCancel !== "function") {
+    return;
+  }
+
+  const confirmAction = () => {
+    if (window.confirm(message)) {
+      onConfirm();
+    } else {
+      onCancel();
+    }
+  };
+
+  return confirmAction;
+};
+const deleteConfirm = () => console.log("삭제했습니다.");
+const cancelConfirm = () => console.log("취소했습니다.");
+const confirmDelete = useConfirm(
+  "삭제하시겠습니까?",
+  deleteConfirm,
+  cancelConfirm
+);
+
+
 const LeftMain = styled.div`
 display: flex;
 flex-direction: column;
@@ -202,12 +229,12 @@ class App extends Component {
 
               <div className='CloudBoxUpText'>
                 <div className='GoogleDriveText'>google drive
-                <span className ="GoogleDriveDel"
-                  onClick={()=>{
+                <button className ="GoogleDriveDel"
+                  onClick={()=>{confirmDelete
                     this.setState({
                             one: false
                     })
-                  }}>삭제</span>
+                  }}>삭제</button>
                 </div>
                 <span>string</span>
                 
@@ -222,7 +249,6 @@ class App extends Component {
           </div>
             :
             null}
-            
 
             {this.props.ShowOneDrive == true ? 
             <div className='CloudBox'>
@@ -256,6 +282,7 @@ class App extends Component {
             : null}
 
           {this.props.ShowMegaDrive == true ? 
+            
             <div className='CloudBox'>
 
             <div className='CloudBoxUp'>
@@ -284,7 +311,7 @@ class App extends Component {
             <span className='StorageVolume'>50GB / 80GB</span>
 
           </div>
-            : null}
+            : null} 
             
 
           </div>
