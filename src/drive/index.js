@@ -21,7 +21,7 @@ margin-top:5px;
 
 export default function Drive() {
   const [datum, setDatum] = useState(
-    () => JSON.parse(window.localStorage.getItem("data")) || data1
+    () => JSON.parse(window.localStorage.getItem("data1")) || data1
   );
 
   const addDrive = (key) => {
@@ -95,12 +95,12 @@ export default function Drive() {
                     </div>
 
                     <div className="GoogleDriveCheckBox">
-                      <input
+                      <label><input
                         className=""
                         type="Checkbox"
                         onChange={() => allSelect(i)}
                       />
-                      <span> 전체선택</span>
+                      전체선택</label>
                     </div>
                   </div>
 
