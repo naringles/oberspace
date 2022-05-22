@@ -19,6 +19,12 @@ import { BsMusicNoteBeamed } from "react-icons/bs";
 
 import Cat1 from "../cat1.jpeg";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+=======
+
+import style from "styled-components";
+import Drive from "../drive";
+>>>>>>> 04d7ab0a7573229e3e618f1047986b450f67358e
 
 import style from "styled-components";
 import Drive from "../drive";
@@ -132,7 +138,10 @@ class Main extends Component {
                     </label>
                   </div>
                 </div>
+<<<<<<< HEAD
     
+=======
+>>>>>>> 04d7ab0a7573229e3e618f1047986b450f67358e
                 <div className="RightTop_Bottom">
                   <div className="RightTop_Bottom_Menu">
                     <div className="Edit">

@@ -21,8 +21,14 @@ margin-top:5px;
 
 export default function Drive() {
   const [datum, setDatum] = useState(
+<<<<<<< HEAD
     () => JSON.parse(window.localStorage.getItem("data")) || data1
   );
+=======
+    () => JSON.parse(window.localStorage.getItem("data1")) || data1
+  );
+
+>>>>>>> 04d7ab0a7573229e3e618f1047986b450f67358e
   const addDrive = (key) => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
