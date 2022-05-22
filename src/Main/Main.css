@@ -124,7 +124,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -145,7 +145,7 @@ table {
 }
 
 div {
-  color: #898989
+  color: #898989;
 }
 
 .Hr {
@@ -175,7 +175,6 @@ div {
   font-size: 14px;
   color: #898989;
 }
-
 
 .UserInformationBox {
   margin-top: 120px;
@@ -216,7 +215,6 @@ div {
   color: white;
   font-size: 14px;
 }
-
 
 .RightMain {
   width: 77.4vw;
@@ -261,9 +259,7 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
-
 
 .LinkedAccountText {
   font-size: 22px;
@@ -295,7 +291,6 @@ progress {
   appearance: none;
 }
 
-
 .ProgressA::-webkit-progress-bar {
   width: 16vw;
   height: 10px;
@@ -308,9 +303,9 @@ progress {
 
 .ProgressA::-webkit-progress-value {
   border-radius: 10px;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);
-  background: linear-gradient(to right, #93F9B9, #1D976C);
+  background: #1d976c;
+  background: -webkit-linear-gradient(to right, #93f9b9, #1d976c);
+  background: linear-gradient(to right, #93f9b9, #1d976c);
 }
 
 .ProgressB::-webkit-progress-bar {
@@ -324,9 +319,9 @@ progress {
 
 .ProgressB::-webkit-progress-value {
   border-radius: 10px;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);
-  background: linear-gradient(to right, #93F9B9, #1D976C);
+  background: #1d976c;
+  background: -webkit-linear-gradient(to right, #93f9b9, #1d976c);
+  background: linear-gradient(to right, #93f9b9, #1d976c);
 }
 
 .ProgressOnDrive::-webkit-progress-bar {
@@ -340,9 +335,9 @@ progress {
 
 .ProgressOnDrive::-webkit-progress-value {
   border-radius: 10px;
-  background: #85A0FF;
-  background: -webkit-linear-gradient(to right, #85A0FF, #85A0FF);
-  background: linear-gradient(to right, #85A0FF, #7e97f3);
+  background: #85a0ff;
+  background: -webkit-linear-gradient(to right, #85a0ff, #85a0ff);
+  background: linear-gradient(to right, #85a0ff, #7e97f3);
 }
 .ProgressMegaDrive::-webkit-progress-bar {
   width: 20vw;
@@ -355,12 +350,10 @@ progress {
 
 .ProgressMegaDrive::-webkit-progress-value {
   border-radius: 10px;
-  background: #FFD874;
-  background: -webkit-linear-gradient(to right, #FFD874, #FFD874);
-  background: linear-gradient(to right, #FFD874, #FFD874);
+  background: #ffd874;
+  background: -webkit-linear-gradient(to right, #ffd874, #ffd874);
+  background: linear-gradient(to right, #ffd874, #ffd874);
 }
-
-
 
 .LogoHr {
   width: 4.2vw;
@@ -382,7 +375,6 @@ progress {
   background-color: #eeeeee;
   border-radius: 15px;
 }
-
 
 .AllStorage {
   height: 15vh;
@@ -420,13 +412,11 @@ progress {
   margin-left: 12px;
 }
 
-
-
 .Search {
   width: 16vw;
   height: 4vh;
   border-radius: 40px;
-  background-color: #DCDCDC;
+  background-color: #dcdcdc;
   padding-left: 2.4vw;
   border: 0px;
   margin-left: 1.8vw;
@@ -446,7 +436,7 @@ progress {
 .UpLoadFile {
   width: 7.5vw;
   height: 4vh;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   position: absolute;
   left: 68vw;
   top: 2.8vh;
@@ -457,7 +447,7 @@ progress {
 }
 
 .UpLoadFileText {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 14px;
   font-weight: 400;
   line-height: 19px;
@@ -466,17 +456,23 @@ progress {
   margin-left: 2px;
 }
 
+.UpLoadFileInput {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
 .CloudUpperBox {
   width: 25.7vw;
   height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .GoogleDriveCheckBox {
-  margin-left: 9vw; 
+  margin-left: 9vw;
   margin-top: 1.2vh;
 }
 
@@ -490,7 +486,10 @@ progress {
   margin-top: 1.2vh;
 }
 
-.Picture, .Document, .Video, .Music {
+.Picture,
+.Document,
+.Video,
+.Music {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -500,25 +499,29 @@ progress {
   margin-top: 5vh;
 }
 
-.Picture span, .Document span, .Video span, .Music span{
+.Picture span,
+.Document span,
+.Video span,
+.Music span {
   margin-left: 15px;
 }
 
-.Edit, .LatestOrder {
+.Edit,
+.LatestOrder {
   display: flex;
   align-items: center;
 }
 
-.Edit span, .LatestOrder span{
+.Edit span,
+.LatestOrder span {
   margin-right: 3px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 
   color: #898989;
-
 }
 
 .RightTop_Bottom_Menu {
@@ -538,22 +541,17 @@ progress {
 
   overflow: auto;
 
-  
-/* 여기서부턴 오른쪽 border 생성  */
-
+  /* 여기서부턴 오른쪽 border 생성  */
 
   border-right-width: thin;
   border-style: solid;
   border-right-color: #ececec;
-  
 }
-
 
 img {
   width: 7.2vw;
   height: 12vh;
 }
-
 
 .PlusButtonBox {
   width: 25.7vw;
