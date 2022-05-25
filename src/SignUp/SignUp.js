@@ -12,8 +12,14 @@ import Modal from 'react-modal';
 import {Route, Link} from 'react-router-dom';
 
 //TODO
-//모달 창 오류, 아이콘 정렬, 회원가입 취소 버튼 추가
+// 아이콘 정렬, 회원가입 취소 버튼 추가
 
+/*
+           <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
+           <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
+           </Modal>
+
+*/
 const ModalStyle = {
 	overlay: {
 		position: "fixed",
@@ -41,11 +47,19 @@ const ModalStyle = {
 };
 
 function SignUp(){ 
+
+  let [userid,setuserid] = useState("");
+  let [username ,setusername] = useState("");
+  let [password,setpassword] = useState("");
+  let [passwordcheck,setpasswordcheck] = useState("");
+  let [usermail,setusermail] = useState("");
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [pass, setPass] = useState(false);
+
   return (
-   
     <div className = "App">
-      
+       
         <img className = "logo" src = {osLogo} alt = 'osLogo'/> 
 
       <div className = "App-header">
@@ -61,7 +75,7 @@ function SignUp(){
           <div className="small-box">
            <HiOutlineUser size = "40" color = "#898989"/>
           </div>
-          <input className="input-box"  placeholder='아이디' size = "20" />
+          <input className="input-box" onChange={(e)=>{setuserid(e.target.value)}} placeholder='아이디' size = "20" />
         </div>
         <br/>
 
@@ -69,7 +83,7 @@ function SignUp(){
           <div className="small-box">
              <HiOutlineKey size = "40" color = "#898989" />
           </div> 
-          <input className="input-box"  placeholder='비밀번호' size = "20" />
+          <input className="input-box" onChange={(e)=>{setpassword(e.target.value)}} placeholder='비밀번호' size = "20" />
         </div>
         <br/>
 
@@ -77,7 +91,7 @@ function SignUp(){
           <div className="small-box">
              <HiLockClosed size = "40" color = "#898989"/>
          </div>   
-         <input className="input-box"  placeholder='비밀번호 확인' size = "20" />
+         <input className="input-box" onChange={(e)=>{(e.target.value)===password ? setPass(true) : setPass(false) }} placeholder='비밀번호 확인' size = "20" />
         </div>
         <br/>
 
@@ -85,7 +99,7 @@ function SignUp(){
           <div className="small-box">
              <HiOutlineStar size = "40" color = "#898989" />
           </div>
-          <input className="input-box" placeholder='닉네임' size = "20" />
+          <input className="input-box" onChange={(e)=>{setusername(e.target.value)}} placeholder='닉네임' size = "20" />
         </div>
         <br/>
 
@@ -94,19 +108,24 @@ function SignUp(){
           <div className="small-box">
              <HiMail size = "40" color = "#898989" />
           </div>
-          <input className="input-box"  placeholder='이메일' size = "20" />
+          <input className="input-box" onChange={(e)=>{setusermail(e.target.value)}} placeholder='이메일' size = "20" />
            
         </div>
         <br/><br/><br/>
         
-        <button className="button-box" onClick={() => setModalIsOpen(true)}> 가입하기</button>
-        <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
-           가입 완료!
-           <Link to = "/Login">
-               <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
-            </Link>
-        </Modal>
-        
+        <button className="button-box" onClick={() => {setModalIsOpen(true)}} > 
+          가입하기
+        </button>
+
+       
+         <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
+           {username}님, 회원가입 완료!
+           <br></br>
+          <Link to = "/Login">
+             <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
+           </Link> 
+          </Modal>
+
         <br/><br/><br/><br/><br/>
       
      </div>
@@ -114,6 +133,8 @@ function SignUp(){
   );
   
 }
+
+
 
 Modal.setAppElement('#root');
 export default SignUp;
