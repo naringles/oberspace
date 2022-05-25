@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/oberspace/static/css/main.080e5070.css",
+    "main.js": "/oberspace/static/js/main.cd9c8572.js",
+    "static/js/787.6869921a.chunk.js": "/oberspace/static/js/787.6869921a.chunk.js",
+    "static/media/LogoImage.jpeg": "/oberspace/static/media/LogoImage.4a2c6c4a12697068970d.jpeg",
+    "index.html": "/oberspace/index.html",
+    "main.080e5070.css.map": "/oberspace/static/css/main.080e5070.css.map",
+    "main.cd9c8572.js.map": "/oberspace/static/js/main.cd9c8572.js.map",
+    "787.6869921a.chunk.js.map": "/oberspace/static/js/787.6869921a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.080e5070.css",
+    "static/js/main.cd9c8572.js"
+  ]
+}
