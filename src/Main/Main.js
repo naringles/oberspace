@@ -128,7 +128,7 @@ class Main extends Component {
                         onchange="addFile(this);"
                         multiple
                       />
-                      파일 올리기
+                      파일 올리기1
                     </label>
                   </div>
                 </div>
