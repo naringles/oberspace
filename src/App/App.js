@@ -76,7 +76,7 @@ class Rr extends Component {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="/oberspace"
             element={
               <Main
                 test={this.state.test}
@@ -134,7 +134,7 @@ class App extends Component {
                 <MenuUserIcon>
                   <AiOutlineUser size="40" color="gray" className="AB" />
                 </MenuUserIcon>
-                <Link to="/">
+                <Link to="/oberspace">
                   <BiMenu size="40" color="gray" />
                 </Link>
                 <AiOutlineFolder size="40" color="gray" />
