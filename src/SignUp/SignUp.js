@@ -8,26 +8,6 @@ import {HiLockClosed} from "react-icons/hi";
 import {HiOutlineStar} from "react-icons/hi";
 import {HiMail} from "react-icons/hi";
 
-<<<<<<< HEAD
-import SignUpModal from '../Modals/SignUpModal';
-
-//TODO
-//모달 창 오류, 아이콘 정렬, 회원가입 취소 버튼 추가
-
-function SignUp(){ 
-  const [signUpModalOn, setSignUpModalOn] = useState(false);
-  return (
-    
-  
-    <div className = "App">
-      
-        <img className = "logo" src = {osLogo} alt = 'osLogo'/> 
-      
-      <SignUpModal 
-            show={signUpModalOn} 
-            onHide={()=>setSignUpModalOn(false)} 
-      />
-=======
 import Modal from 'react-modal';
 import {Route, Link} from 'react-router-dom';
 
@@ -81,7 +61,6 @@ function SignUp(){
     <div className = "App">
        
         <img className = "logo" src = {osLogo} alt = 'osLogo'/> 
->>>>>>> dahye
 
       <div className = "App-header">
 
@@ -96,11 +75,7 @@ function SignUp(){
           <div className="small-box">
            <HiOutlineUser size = "40" color = "#898989"/>
           </div>
-<<<<<<< HEAD
-          <input className="input-box"  placeholder='아이디' size = "20" />
-=======
           <input className="input-box" onChange={(e)=>{setuserid(e.target.value)}} placeholder='아이디' size = "20" />
->>>>>>> dahye
         </div>
         <br/>
 
@@ -108,11 +83,7 @@ function SignUp(){
           <div className="small-box">
              <HiOutlineKey size = "40" color = "#898989" />
           </div> 
-<<<<<<< HEAD
-          <input className="input-box"  placeholder='비밀번호' size = "20" />
-=======
           <input className="input-box" onChange={(e)=>{setpassword(e.target.value)}} placeholder='비밀번호' size = "20" />
->>>>>>> dahye
         </div>
         <br/>
 
@@ -120,11 +91,7 @@ function SignUp(){
           <div className="small-box">
              <HiLockClosed size = "40" color = "#898989"/>
          </div>   
-<<<<<<< HEAD
-         <input className="input-box"  placeholder='비밀번호 확인' size = "20" />
-=======
          <input className="input-box" onChange={(e)=>{(e.target.value)===password ? setPass(true) : setPass(false) }} placeholder='비밀번호 확인' size = "20" />
->>>>>>> dahye
         </div>
         <br/>
 
@@ -132,11 +99,7 @@ function SignUp(){
           <div className="small-box">
              <HiOutlineStar size = "40" color = "#898989" />
           </div>
-<<<<<<< HEAD
-          <input className="input-box" placeholder='닉네임' size = "20" />
-=======
           <input className="input-box" onChange={(e)=>{setusername(e.target.value)}} placeholder='닉네임' size = "20" />
->>>>>>> dahye
         </div>
         <br/>
 
@@ -145,25 +108,6 @@ function SignUp(){
           <div className="small-box">
              <HiMail size = "40" color = "#898989" />
           </div>
-<<<<<<< HEAD
-          <input className="input-box"  placeholder='이메일' size = "20" />
-           
-        </div>
-        <br/><br/><br/>
-
-        <button 
-            className="button-box" 
-            onClick={() => setSignUpModalOn(true)}> 
-            가입하기
-        </button>
-        
-          
-      
-        
-        <br/><br/><br/><br/><br/>
-        
-
-=======
           <input className="input-box" onChange={(e)=>{setusermail(e.target.value)}} placeholder='이메일' size = "20" />
         </div>
         <br/><br/><br/>
@@ -182,17 +126,13 @@ function SignUp(){
        </Modal>
         <br/><br/><br/><br/><br/>
       
->>>>>>> dahye
      </div>
     </div>
   );
   
 }
 
-<<<<<<< HEAD
-=======
 
 
 Modal.setAppElement('#root');
->>>>>>> dahye
 export default SignUp;
