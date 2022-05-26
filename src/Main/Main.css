@@ -412,6 +412,8 @@ progress {
   margin-left: 12px;
 }
 
+
+
 .Search {
   width: 16vw;
   height: 4vh;
@@ -469,6 +471,7 @@ progress {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .GoogleDriveCheckBox {
@@ -553,10 +556,18 @@ img {
   height: 12vh;
 }
 
+<<<<<<< HEAD:src/Main/Main.css
+=======
+
+>>>>>>> dahye:Front/src/Main.css
 .PlusButtonBox {
   width: 25.7vw;
   height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD:src/Main/Main.css
 }
+=======
+}
+>>>>>>> dahye:Front/src/Main.css

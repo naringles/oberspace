@@ -3,6 +3,11 @@ import './Login.css';
 import { AiFillLock,AiOutlineUser} from "react-icons/ai";
 import {Route, Link} from 'react-router-dom';
 
+<<<<<<< HEAD
+=======
+//+회원가입 밑줄 없애기
+
+>>>>>>> dahye
 class Login extends Component {
 render() {
   return (
@@ -28,9 +33,16 @@ render() {
       <input type="submit" className="login" value="로그인"></input>
 
       <div className="join1">
+<<<<<<< HEAD
         <li>
            <Link to = "/SignUp">회원가입</Link>
         </li>
+=======
+           <Link to = "/SignUp">
+             <a className='App-link'>+ 회원가입</a>
+          </Link>
+        
+>>>>>>> dahye
       </div>
      </div>
   );
