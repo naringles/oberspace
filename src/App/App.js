@@ -146,7 +146,6 @@ class App extends Component {
                   }}
                 >
                   {" "}
-                  dd
                 </span>
               </div>
               <LeftMain>

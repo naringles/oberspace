@@ -48,11 +48,7 @@ class Main extends Component {
         <body>
           <div className="Main">
             <div className="MenuList">
-              <Link to="/a">
-                <div className="Logo">
-                  <img className="L" src={require("../LogoImage.jpeg")} />
-                </div>
-              </Link>
+              <img className="L" src={require("../LogoImage.jpeg")} />
               <div className="LogoHr"></div>
               <Link to="/a">
                 <div className="MenuUserIcon">
@@ -64,7 +60,11 @@ class Main extends Component {
               </div>
               <AiOutlineFolder size="40" color="gray" />
               <AiOutlineSwap size="40" color="gray" />
-              <AiOutlineExclamationCircle size="40" color="gray" />
+              <Link to="/Compare">
+                <div className="MenuUserIcon1">
+                  <AiOutlineExclamationCircle size="40" color="gray" />
+                </div> 
+              </Link>
             </div>
             <div className="LeftMain">
               <div className="AllStorage">
