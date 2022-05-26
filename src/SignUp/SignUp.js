@@ -12,7 +12,7 @@ import Modal from 'react-modal';
 import {Route, Link} from 'react-router-dom';
 
 //TODO
-// 아이콘 정렬, 회원가입 취소 버튼 추가
+// 아이콘 정렬, 모달 창 두가지로 뜨게 하는 방법 찾기
 
 /*
            <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
@@ -22,7 +22,7 @@ import {Route, Link} from 'react-router-dom';
 */
 const ModalStyle = {
 	overlay: {
-		position: "fixed",
+		position: "flexed",
 		top: 0,
 		left: 0,
 		right: 0,
@@ -109,23 +109,21 @@ function SignUp(){
              <HiMail size = "40" color = "#898989" />
           </div>
           <input className="input-box" onChange={(e)=>{setusermail(e.target.value)}} placeholder='이메일' size = "20" />
-           
         </div>
         <br/><br/><br/>
         
+
         <button className="button-box" onClick={() => {setModalIsOpen(true)}} > 
-          가입하기
+           가입하기
         </button>
-
-       
-         <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
-           {username}님, 회원가입 완료!
-           <br></br>
-          <Link to = "/Login">
-             <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
-           </Link> 
-          </Modal>
-
+      
+       <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
+        {username}님, 회원가입 완료!
+         <br></br>
+            <Link to = "/Login">
+               <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
+            </Link> 
+       </Modal>
         <br/><br/><br/><br/><br/>
       
      </div>
