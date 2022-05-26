@@ -13,6 +13,7 @@ import Login from "../Login";
 import SignUp from "../SignUp/SignUp";
 import Swal from "sweetalert2";
 import User from "../user";
+import Compare from "../Compare"
 
 class Rr extends Component {
   constructor(props) {
@@ -100,6 +101,7 @@ class Rr extends Component {
           ></Route>
           <Route path="/Login" element={<Login></Login>}></Route>
           <Route path="/SignUp" element={<SignUp></SignUp>}></Route>
+          <Route path="/Compare" element={<Compare></Compare>}></Route>
         </Routes>
       </BrowserRouter>
     );
@@ -134,12 +136,17 @@ class App extends Component {
                 <MenuUserIcon>
                   <AiOutlineUser size="40" color="gray" className="AB" />
                 </MenuUserIcon>
+
                 <Link to="/">
                   <BiMenu size="40" color="gray" />
                 </Link>
+
                 <AiOutlineFolder size="40" color="gray" />
-                <AiOutlineSwap size="40" color="gray" />
-                <AiOutlineExclamationCircle size="40" color="gray" />
+
+                <Link to ="/Compare">
+                  <AiOutlineExclamationCircle size="40" color='gray' />
+                </Link>
+                
                 <span
                   onClick={() => {
                     console.log(this.props.ShowGoogleDrive);

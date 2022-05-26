@@ -28,9 +28,7 @@ render() {
       <input type="submit" className="login" value="로그인"></input>
 
       <div className="join1">
-        <li>
-           <Link to = "/SignUp">회원가입</Link>
-        </li>
+           <Link to = "/SignUp">SIGN UP</Link>
       </div>
      </div>
   );

@@ -110,6 +110,8 @@ body {
   line-height: 1;
 }
 
+
+
 ol,
 ul {
   list-style: none;
@@ -174,6 +176,13 @@ div {
   margin-top: 10px;
   font-size: 14px;
   color: #898989;
+}
+
+select{
+  color: #898989;
+  font-weight: 400;
+  font-size: 16px;
+  border:0px;
 }
 
 .UserInformationBox {
