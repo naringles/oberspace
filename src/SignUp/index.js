@@ -1,6 +1,4 @@
 import SignUp from './Signup'
-<<<<<<< HEAD
-=======
 const rootElement = document.getElementById("root");
 
 ReactDOM.render(
@@ -9,6 +7,5 @@ ReactDOM.render(
   </StrictMode>,
   rootElement
 );
->>>>>>> dahye
 
 export default SignUp
