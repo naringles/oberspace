@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const PORT = process.env.PORT || 4000;
 
+
 const connection = mysql.createConnection({
     host : 'oberspacedb.cq9exfcv1cnv.ap-northeast-2.rds.amazonaws.com',
     user : 'oberspace',
