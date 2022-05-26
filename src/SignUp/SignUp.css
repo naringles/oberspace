@@ -56,6 +56,10 @@
 }
 
 .button-box{
+<<<<<<< HEAD
+=======
+  display: none;
+>>>>>>> dahye
   width : 50vh;
   height : 7vh;
   background-color: #DCDCDC;
@@ -64,4 +68,14 @@
   font-style: #FFFFFF;
 }
 
+<<<<<<< HEAD
+=======
+.modal-button{
+  width : 5vh;
+  height : 2vh;
+  border :0;
+  outline: 0;
+  background-color: #DCDCDC;
+}
+>>>>>>> dahye
 
