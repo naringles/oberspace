@@ -1,4 +1,4 @@
-import React, { Component,useState } from 'react';
+import React, { Component } from 'react';
 import './Main.css';
 import { AiFillFileText, AiOutlineUser } from "react-icons/ai";
 import { AiOutlineFolder } from "react-icons/ai";
@@ -297,35 +297,35 @@ class Main extends Component {
                                 <div className='ListUI'>
                                 <br/><br/>
                                 
-                                <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                 <hr/>
                             
 
@@ -461,36 +461,37 @@ class Main extends Component {
                                     :
                                         <div className='ListUI'>
                                             <br/><br/>
+
                                             
-                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
                                            
 
@@ -634,35 +635,35 @@ class Main extends Component {
                                     <div className='ListUI'>
                                             <br/><br/>
                                             
-                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
                                             <hr/>
                                            
 
