@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,useState } from 'react';
 import './Main.css';
 import { AiFillFileText, AiOutlineUser } from "react-icons/ai";
 import { AiOutlineFolder } from "react-icons/ai";
@@ -9,7 +9,7 @@ import { BiMenu } from 'react-icons/bi'
 import { AiOutlineCloud } from 'react-icons/ai'
 import { AiOutlineSearch } from "react-icons/ai";
 import { AiOutlineCloudUpload } from "react-icons/ai";
-import { BsListUl } from "react-icons/bs";
+import { BsListUl, BsSunsetFill } from "react-icons/bs";
 import { BsGrid } from "react-icons/bs";
 import { AiFillPicture } from "react-icons/ai";
 import { AiOutlineFileText } from "react-icons/ai";
@@ -41,12 +41,14 @@ margin-top:5px;
 
 class Main extends Component {
 
+
     constructor(props) {
         super(props);
         this.state = {
             one: true,
             two: true,
-            three: true
+            three: true,
+            gridUI : true
         };
     }
 
@@ -58,8 +60,9 @@ class Main extends Component {
         this.props.parentFunction('AB'); 
     }
 
-
     render() {
+
+
         return (
             <html>
 
@@ -162,8 +165,17 @@ class Main extends Component {
                                         <span>최신순</span>
                                         <AiOutlineDown size={14}/>
                                     </div>
-                                    <BsListUl size={25} />
-                                    <BsGrid size={22} />
+                                    <BsListUl onClick={ ()=>{
+                                                this.setState({
+                                                    gridUI: false
+                                                })
+                                            }} size={25} />
+                                    <BsGrid onClick={ ()=>{
+                                                this.setState({
+                                                    gridUI: true
+                                                })
+                                            }} size={22} />
+                                   
                                     </div>
                                 </div>
 
@@ -207,79 +219,120 @@ class Main extends Component {
 
                                 </div>
 
-                                <div className='ImageGrid'>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    <ImageGridDiv>
-                                    <img src={Cat1}></img>
-                                    <ImageGridName>고양이.jpeg</ImageGridName>
-                                    </ImageGridDiv>
-                                    
-                                    
+                                
 
-                                </div>
+                                {this.state.gridUI == true ?
+                                    <div className='ImageGrid'>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                        <ImageGridDiv>
+                                        <img src={Cat1}></img>
+                                        <ImageGridName>고양이.jpeg</ImageGridName>
+                                        </ImageGridDiv>
+                                    </div>
+                            
+                            :
+                                <div className='ListUI'>
+                                <br/><br/>
+                                
+                                <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                <hr/>
+                            
+
+                            </div>
+                       
+                        
+                    }
 
                                 <div>트래픽 제한 612GB</div>
                             </div>
@@ -333,80 +386,119 @@ class Main extends Component {
 
                                  </div>
 
-                                 <div className='ImageGrid'>
-                                 <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     <ImageGridDiv>
-                                     <img src={Cat1}></img>
-                                     <ImageGridName>고양이.jpeg</ImageGridName>
-                                     </ImageGridDiv>
-                                     
-                                     
-                                     
+                                    {this.state.gridUI == true ?
+                                        <div className='ImageGrid'>
+                                        <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                        </div>
+                                    
+                                    :
+                                        <div className='ListUI'>
+                                            <br/><br/>
+                                            
+                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                           
 
-                                 </div>
+                                        </div>
+                                       
+                                        
+                                    }
+                                    
                                  <div>트래픽 제한 612GB</div>
                                      
                              </div>
@@ -460,81 +552,124 @@ class Main extends Component {
                                         <span className='StorageVolume'>50GB / 80GB</span>
 
                                     </div>
-                                    
-                                    <div className='ImageGrid'>
-                                    <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
+                                    {this.state.gridUI == true ?
+                                        <div className='ImageGrid'>
                                         <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
-                                        <ImageGridDiv>
-                                        <img src={Cat1}></img>
-                                        <ImageGridName>고양이.jpeg</ImageGridName>
-                                        </ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
+                                            <ImageGridDiv>
+                                            <img src={Cat1}></img>
+                                            <ImageGridName>고양이.jpeg</ImageGridName>
+                                            </ImageGridDiv>
                                         
+                                        
+                                    
                                         
                                         
 
                                     </div>
+                                    :
+
+                                    <div className='ListUI'>
+                                            <br/><br/>
+                                            
+                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jepg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
+                                           
+
+                                        </div>
+                                       
+
+                                }
                                     <div>트래픽 제한 612GB</div>
                                 </div> : 
                                 <div className='PlusButtonBox'>

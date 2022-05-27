@@ -548,7 +548,12 @@ progress {
   
 }
 
+.ListUI {
+  
+  font-size: small;
+  overflow: auto;
 
+}
 img {
   width: 7.2vw;
   height: 12vh;
