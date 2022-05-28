@@ -3,6 +3,8 @@ import './Login.css';
 import { AiFillLock,AiOutlineUser} from "react-icons/ai";
 import {Route, Link} from 'react-router-dom';
 
+//+회원가입 밑줄 없애기
+
 class Login extends Component {
 render() {
   return (
@@ -29,6 +31,10 @@ render() {
 
       <div className="join1">
            <Link to = "/SignUp">SIGN UP</Link>
+           <Link to = "/SignUp">
+             <a className='App-link'>+ 회원가입</a>
+          </Link>
+        
       </div>
      </div>
   );
