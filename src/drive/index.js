@@ -7,9 +7,8 @@ import { data1 } from "../data";
 import Swal from "sweetalert2";
 
 const ImageGridDiv = style.div`
-    display:flex;
+  display:flex;
   flex-direction: column;
-
 `;
 
 const ImageGridName = style.div`
