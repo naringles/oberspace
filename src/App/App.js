@@ -14,9 +14,10 @@ import { AiOutlineCloud } from 'react-icons/ai'
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 import Main from '../Main/index';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import Login from '../Login';
 import SignUp from '../SignUp/SignUp';
+import F_Login from '../F_Login/F_Login';
 
 class Rr extends Component {
 
@@ -97,6 +98,9 @@ class Rr extends Component {
           <Route path="/SignUp" element={<SignUp
           
           ></SignUp>}></Route>
+           <Route path="/F_Login" element={<F_Login
+          
+          ></F_Login>}></Route>
       </Routes>
 
     </BrowserRouter>

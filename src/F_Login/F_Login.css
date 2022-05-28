@@ -1,0 +1,42 @@
+.App {
+    text-align: center;
+    background-color:#FFFFFF
+  }
+.L{
+    position: absolute;
+    width: 599px;
+    height: 327px;
+    top : 180px;
+    left : 680px;
+   
+
+}
+.login2{
+    position: absolute;
+    top : 620px;
+    left : 720px;
+    width:500px;
+    height:64px;
+    background:#DCDCDC;
+     border: 2px solid #DCDCDC;
+    box-sizing: border-box;
+   
+  }
+.join2{
+    position: absolute;
+    width: 106px;
+    height: 29px;
+    top : 720px;
+    left : 920px;
+    font-family:'Inter';
+    font-style: normal;
+    font-weight: 400px;
+    font-size:20px;
+    line-height: 24px;
+    color: #898989;
+  }
+.App-link {
+   color: #898989;
+  text-decoration: none;
+}
+
