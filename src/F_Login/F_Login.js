@@ -10,7 +10,7 @@ render() {
   return (
     <div className="App">
       <div className="obserSpace">
-      <img className='L'
+      <img className='L2'
           src={require('../LogoImage.jpeg')}
       />
       </div>
@@ -18,7 +18,7 @@ render() {
       <Link to = "/Login">
          <input type="submit" className="login2" value="로그인"></input>
       </Link>
-      
+
       <div className="join2">
            <Link to = "/SignUp">
              <a className='App-link'>+ 회원가입</a>

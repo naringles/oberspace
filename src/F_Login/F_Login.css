@@ -2,19 +2,19 @@
     text-align: center;
     background-color:#FFFFFF
   }
-.L{
+.L2{
     position: absolute;
     width: 599px;
     height: 327px;
     top : 180px;
-    left : 680px;
+    left : 670px;
    
 
 }
 .login2{
     position: absolute;
     top : 620px;
-    left : 720px;
+    left : 710px;
     width:500px;
     height:64px;
     background:#DCDCDC;
@@ -27,7 +27,7 @@
     width: 106px;
     height: 29px;
     top : 720px;
-    left : 920px;
+    left : 910px;
     font-family:'Inter';
     font-style: normal;
     font-weight: 400px;
