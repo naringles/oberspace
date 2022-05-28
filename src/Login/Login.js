@@ -26,9 +26,10 @@ render() {
           <AiFillLock size="40" color="gray" className='IconPw'/></div>
         <input type="password" className="loginPw" placeholder='  비밀번호'></input>
       </div>
-
-      <input type="submit" className="login" value="로그인"></input>
-
+      
+      <Link to = "/">
+          <input type="submit" className="login" value="로그인"></input>
+      </Link>
       <div className="join1">
            <Link to = "/SignUp">
              <a className='App-link'>+ 회원가입</a>
