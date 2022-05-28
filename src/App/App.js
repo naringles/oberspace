@@ -7,6 +7,7 @@ import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { BiMenu } from "react-icons/bi";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
+<<<<<<< HEAD
 import Main from "../Main/index";
 import styled from "styled-components";
 import Login from "../Login";
@@ -14,6 +15,18 @@ import SignUp from "../SignUp/SignUp";
 import Swal from "sweetalert2";
 import User from "../user";
 import Compare from "../Compare"
+=======
+import { BiMenu } from 'react-icons/bi'
+import { AiOutlineCloud } from 'react-icons/ai'
+
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+
+import Main from '../Main/index';
+import styled from 'styled-components';
+import Login from '../Login';
+import SignUp from '../SignUp/SignUp';
+import F_Login from '../F_Login/F_Login';
+>>>>>>> main
 
 class Rr extends Component {
   constructor(props) {
@@ -39,11 +52,39 @@ class Rr extends Component {
     });
   };
 
+<<<<<<< HEAD
   OneDriveNotShow = () => {
     this.setState({
       oneDriveShow: false,
     });
   };
+=======
+  render(){
+  return (
+    <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<Main
+          test = {this.state.test} testtrue = {this.testtrue} parentFunction={this.parentFunction}
+          ShowGoogleDrive ={this.state.ShowGoogleDrive}
+          GoogleDriveChange ={this.GoogleDriveChange}
+          ></Main>}></Route>
+          <Route path="/a" element={<App
+          test = {this.state.test}
+          ShowGoogleDrive = {this.state.ShowGoogleDrive}
+          ShowOneDrive = {this.state.ShowOneDrive}
+          ShowMegaDrive = {this.state.ShowMegaDrive}
+          ></App>}></Route>
+          <Route path="/Login" element={<Login
+          
+          ></Login>}></Route>
+          <Route path="/SignUp" element={<SignUp
+          
+          ></SignUp>}></Route>
+           <Route path="/F_Login" element={<F_Login
+          
+          ></F_Login>}></Route>
+      </Routes>
+>>>>>>> main
 
   MegaDriveShow = () => {
     this.setState({
