@@ -21,6 +21,7 @@ import { AiOutlinePlusCircle } from 'react-icons/ai'
 
 import Cat1 from '../cat1.jpeg'
 import { Link } from 'react-router-dom'
+import ImageModal from '../Modals/ImageModal';
 
 import style from 'styled-components'
 
@@ -48,7 +49,9 @@ class Main extends Component {
             one: true,
             two: true,
             three: true,
-            gridUI : true
+            gridUI : true,
+            contents: [{Cat1}],
+            hasModal : false
         };
     }
 
@@ -60,13 +63,24 @@ class Main extends Component {
         this.props.parentFunction('AB'); 
     }
 
+    controlModal = () => {
+        this.setState({
+            hasModal: !this.state.hasModal
+        });
+    }
+
+
+
     render() {
 
 
         return (
+            
             <html>
 
                 <body>
+                 
+
                     <div className="Main">
 
                         <div className='MenuList'>
@@ -296,38 +310,142 @@ class Main extends Component {
                             :
                                 <div className='ListUI'>
                                 <br/><br/>
-                                
-                                <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                                <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                <hr/>
-                            
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
 
                             </div>
                        
@@ -459,44 +577,155 @@ class Main extends Component {
                                         </div>
                                     
                                     :
-                                        <div className='ListUI'>
-                                            <br/><br/>
+                                         <div className='ListUI'>
+                                <br/><br/>
 
-                                            
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                           
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
 
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+
+                                <span className='ListLine'>
+                                       <input type='Checkbox'/>
+                                            <div onClick={() => this.controlModal()}>
+                                             &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                            <hr/>
                                         </div>
-                                       
+                               </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+
+                                <span className='ListLine'>
+                                     <input type='Checkbox'/>
+                                         <div onClick={() => this.controlModal()}>
+                                          &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                         <hr/>
+                                     </div>
+                                </span>
+                                
+                            </div>
+                           
                                         
                                     }
                                     
@@ -627,41 +856,153 @@ class Main extends Component {
                                     :
 
                                     <div className='ListUI'>
-                                            <br/><br/>
-                                            
-                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/> &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/>&nbsp; 고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                            <input type='Checkbox'/>&nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
-                                            <hr/>
-                                           
+                                    <br/><br/>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
 
-                                        </div>
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+                                    
+                                    <span className='ListLine'>
+                                         <input type='Checkbox'/>
+                                             <div onClick={() => this.controlModal()}>
+                                              &nbsp;<AiFillPicture size={20}/> &nbsp;고양이.jpeg &nbsp; 300KB &nbsp; 2022.05.08 오전 02:41
+                                             <hr/>
+                                         </div>
+                                    </span>
+                                </div>
+                           
                                        
 
                                 }
@@ -686,6 +1027,11 @@ class Main extends Component {
 
                         </div>
                     </div>
+                    <div>
+                     {this.state.hasModal && (
+                        <ImageModal images={Cat1} close={this.controlModal}></ImageModal>
+                     )}
+                  </div>
                 </body>
             </html>
 
