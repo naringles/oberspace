@@ -20,33 +20,14 @@ import style from "styled-components";
 import Drive from "../drive";
 import { AiOutlineVideoCamera } from "react-icons/ai";
 import { BsMusicNoteBeamed } from "react-icons/bs";
-
-import React, { Component } from "react";
-import "./Main.css";
-import { AiOutlineUser } from "react-icons/ai";
-import { AiOutlineFolder } from "react-icons/ai";
-import { AiOutlineSwap } from "react-icons/ai";
-import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { DropdownButton } from "react-bootstrap";
-
-
-
-import { AiOutlineVideoCamera } from "react-icons/ai";
-import { BsMusicNoteBeamed } from "react-icons/bs";
-
 import { AiOutlinePlusCircle } from 'react-icons/ai'
-
-import Cat1 from '../cat1.jpeg'
-import { Link } from 'react-router-dom'
-
-import style from 'styled-components'
 
 const ImageGridDiv = style.div`
     display:flex;
   flex-direction: column;
 
 `
-
 const ImageGridName = style.div`
 // margin-left:2px;
 margin: 0 auto;
