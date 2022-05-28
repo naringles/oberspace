@@ -1,3 +1,3 @@
-import Rr from "./App";
+import Rr from './App'
 
-export default Rr;
+export default Rr
