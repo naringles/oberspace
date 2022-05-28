@@ -551,6 +551,16 @@ progress {
   border-right-color: #ececec;
 }
 
+.ListUI {
+  font-size: medium;
+  overflow: auto;
+}
+.ListLine{
+  flex-direction: 'row';
+   display: flex;
+
+}
+
 img {
   width: 7.2vw;
   height: 12vh;
