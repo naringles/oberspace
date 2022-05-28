@@ -1,0 +1,33 @@
+.MenuUserIcon {
+    margin-top: 8vh;
+  }
+
+  .MenuList {
+    width: 4.5vw;
+    height: var(--heightvalue);
+    border-right-width: thin;
+    border-style: solid;
+    border-right-color: #ececec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MenuExclam{
+    background-color: #eeeeee;
+    border-radius: 15px;
+  }
+
+  .Left {
+    width: 50vw;
+    height: var(--heightvalue);
+    display: flex;
+  }
+
+  .Main {
+    width: 100vw;
+    height: 99vh;
+    display: flex;
+    flex-direction: row;
+  }
+  

@@ -59,7 +59,6 @@ class Main extends Component {
                 <BiMenu size="40" color="gray" />
               </div>
               <AiOutlineFolder size="40" color="gray" />
-              <AiOutlineSwap size="40" color="gray" />
               <Link to="/Compare">
                 <div className="MenuUserIcon1">
                   <AiOutlineExclamationCircle size="40" color="gray" />
@@ -135,17 +134,21 @@ class Main extends Component {
 
                 <div className="RightTop_Bottom">
                   <div className="RightTop_Bottom_Menu">
-                    <div className="Edit">
-                      <span>편집</span>
-                      <AiOutlineDown size={14} />
-                    </div>
+                  <div className='Edit'>
+                    <select>
+                      <option value="A">편집</option>
+                      <option value="B">1</option>
+                    </select>
+                  </div>
                     <div className="LatestOrder">
-                      <span>최신순</span>
-                      <AiOutlineDown size={14} />
+                      <select>
+                       <option value="A">최신순</option>
+                       <option value="B">오래된순</option>
+                      </select>
                     </div>
                     <BsListUl size={25} />
                     <BsGrid size={22} />
-                  </div>
+                    </div>
                 </div>
               </div>
 
