@@ -39,7 +39,6 @@ export default function Drive() {
         showCancelButton: true,
         confirmButtonText: "Yes",
         cancelButtonText: "No",
-        reverseButtons: true,
       })
       .then((result) => {
         if (result.isConfirmed) {

@@ -24,17 +24,16 @@ export default function User() {
 
     swalWithBootstrapButtons
       .fire({
-        title: `${str}를 삭제하시겠습니까?`,
+        title: `${str} 해제하시겠습니까?`,
         icon: "warning",
         showCancelButton: true,
         confirmButtonText: "Yes",
         cancelButtonText: "No",
-        reverseButtons: true,
       })
       .then((result) => {
         if (result.isConfirmed) {
           swalWithBootstrapButtons.fire(
-            `${str}가 삭제되었습니다`,
+            `${str}가 해제되었습니다`,
             "",
             "success"
           );
@@ -67,7 +66,7 @@ export default function User() {
                       className="OneDriveDel"
                       onClick={() => deleteDrive(item.value[0], i)}
                     >
-                      삭제
+                      계정해제
                     </span>
                   </div>
                   <span>string</span>
