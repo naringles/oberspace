@@ -2,15 +2,11 @@ import React, { Component, useState } from 'react';
 import './A.css';
 import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineFolder } from "react-icons/ai";
-
 import { AiOutlineSwap } from "react-icons/ai";
-
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { AiOutlineDown } from "react-icons/ai";
-
 import { BiMenu } from 'react-icons/bi'
 import { AiOutlineCloud } from 'react-icons/ai'
-
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 import Main from '../Main/index';
@@ -27,7 +23,10 @@ class Rr extends Component {
         test: false,
         ShowGoogleDrive: true,
         ShowOneDrive: true,
-        ShowMegaDrive: true
+        ShowMegaDrive: true,
+        one: true,
+        two: true,
+        three: true,
     };
 }
 
@@ -81,28 +80,32 @@ class Rr extends Component {
   return (
     <BrowserRouter>
       <Routes>
-          <Route path="/" element={<Main
-          test = {this.state.test} testtrue = {this.testtrue} parentFunction={this.parentFunction}
-          ShowGoogleDrive ={this.state.ShowGoogleDrive}
-          GoogleDriveChange ={this.GoogleDriveChange}
-          ></Main>}></Route>
-          <Route path="/a" element={<App
-          test = {this.state.test}
-          ShowGoogleDrive = {this.state.ShowGoogleDrive}
-          ShowOneDrive = {this.state.ShowOneDrive}
-          ShowMegaDrive = {this.state.ShowMegaDrive}
-          ></App>}></Route>
-          <Route path="/Login" element={<Login
-          
-          ></Login>}></Route>
-          <Route path="/SignUp" element={<SignUp
-          
-          ></SignUp>}></Route>
-           <Route path="/F_Login" element={<F_Login
-          
-          ></F_Login>}></Route>
+      <Route
+            path="/"
+            element={
+              <Main
+                test={this.state.test}
+                testtrue={this.testtrue}
+                parentFunction={this.parentFunction}
+                ShowGoogleDrive={this.state.ShowGoogleDrive}
+                GoogleDriveChange={this.GoogleDriveChange}
+              ></Main>
+            }
+          ></Route>
+          <Route
+            path="/a"
+            element={
+              <App
+                test={this.state.test}
+                ShowGoogleDrive={this.state.ShowGoogleDrive}
+                ShowOneDrive={this.state.ShowOneDrive}
+                ShowMegaDrive={this.state.ShowMegaDrive}
+              ></App>
+            }
+          ></Route>
+          <Route path="/Login" element={<Login></Login>}></Route>
+          <Route path="/SignUp" element={<SignUp></SignUp>}></Route>
       </Routes>
-
     </BrowserRouter>
   )
   }
@@ -148,7 +151,7 @@ class App extends Component {
               onClick={()=>{
                 console.log(this.props.ShowGoogleDrive)
               }}
-              > dd</span>
+              >{" "} dd</span>
             </div>
             <LeftMain>
               <div className='UserIconBox'>
@@ -172,93 +175,8 @@ class App extends Component {
           <div className='Hr'></div>
 
           <div className="RightMain">
-            <div className='Right1'>
-              <span className='LinkedAccountText'>연결된 계정</span>
-              <span className='AccountCareText'>계정 관리
-              <AiOutlineDown size='12'/>
-              </span>
-            </div>
-
-
-            {this.props.ShowGoogleDrive == true ? 
-            <div className='CloudBox'>
-
-            <div className='CloudBoxUp'>
-              <div className=''>
-                <AiOutlineCloud size='40'/>
-              </div>
-
-              <div className='CloudBoxUpText'>
-                <span className='GoogleDriveText'>google drive</span>
-                <span>string</span>
-              </div>
-
-
-            </div>
-
-            <div className='ProgressDiv'>
-              <progress value="50" max="80" className='Progress'/>
-            </div>
-
-            <span className='StorageVolume'>50GB / 80GB</span>
-
-          </div>
-            :
-            
-            null}
-            
-
-            {this.props.ShowOneDrive == true ? 
-            <div className='CloudBox'>
-
-            <div className='CloudBoxUp'>
-              <div className=''>
-                <AiOutlineCloud size='40'/>
-              </div>
-
-              <div className='CloudBoxUpText'>
-                <span className='GoogleDriveText'>One drive</span>
-                <span>string</span>
-              </div>
-
-
-            </div>
-
-            <div className='ProgressDiv'>
-              <progress value="50" max="80" className='OneDriveProgress'/>
-            </div>
-
-            <span className='StorageVolume'>50GB / 80GB</span>
-
-          </div>
-            : null}
-
-          {this.props.ShowMegaDrive == true ? 
-            <div className='CloudBox'>
-
-            <div className='CloudBoxUp'>
-              <div className=''>
-                <AiOutlineCloud size='40'/>
-              </div>
-
-              <div className='CloudBoxUpText'>
-                <span className='GoogleDriveText'>Mega drive</span>
-                <span>string</span>
-              </div>
-
-
-            </div>
-
-            <div className='ProgressDiv'>
-              <progress value="50" max="80" className='MegaDriveProgress'/>
-            </div>
-
-            <span className='StorageVolume'>50GB / 80GB</span>
-
-          </div>
-            : null}
-            
-
+            <div className='Right1'></div>
+            <User />
           </div>
         </div>
       </body>

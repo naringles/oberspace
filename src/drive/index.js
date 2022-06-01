@@ -95,12 +95,12 @@ export default function Drive() {
                     </div>
 
                     <div className="GoogleDriveCheckBox">
-                      <label><input
+                      <input
                         className=""
                         type="Checkbox"
                         onChange={() => allSelect(i)}
                       />
-                      전체선택</label>
+                      <span>전체선택</span>
                     </div>
                   </div>
 
