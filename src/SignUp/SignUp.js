@@ -83,7 +83,7 @@ function SignUp(){
           <div className="small-box">
              <HiOutlineKey size = "40" color = "#898989" />
           </div> 
-          <input className="input-box" onChange={(e)=>{setpassword(e.target.value)}} placeholder='비밀번호' size = "20" />
+          <input className="input-box" type="password" onChange={(e)=>{setpassword(e.target.value)}} placeholder='비밀번호' size = "20" />
         </div>
         <br/>
 
@@ -91,7 +91,7 @@ function SignUp(){
           <div className="small-box">
              <HiLockClosed size = "40" color = "#898989"/>
          </div>   
-         <input className="input-box" onChange={(e)=>{(e.target.value)===password ? setpasswordcheck(true) : setpasswordcheck(false) }} placeholder='비밀번호 확인' size = "20" />
+         <input className="input-box" type="password" onChange={(e)=>{(e.target.value)===password ? setpasswordcheck(true) : setpasswordcheck(false) }} placeholder='비밀번호 확인' size = "20" />
         </div>
         <br/>
 
