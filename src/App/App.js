@@ -176,7 +176,7 @@ class App extends Component {
 
           <div className="RightMain">
             <div className='Right1'></div>
-            <User />
+            <user />
           </div>
         </div>
       </body>
