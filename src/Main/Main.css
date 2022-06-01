@@ -493,9 +493,13 @@ progress {
 .Document,
 .Video,
 .Music {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: flex;
-  align-items: center;
+  align-items: left;
+  text-align: left;
+  align-items: flex-start;
+  margin-right: 150px;
+  justify-content: flex-start;
 }
 
 .Picture {
