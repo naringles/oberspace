@@ -31,7 +31,7 @@ render() {
           <input type="submit" className="login" value="로그인"></input>
       </Link>
       <div className="join1">
-           <Link to = "/SignUp">
+           <Link className="a" to = "/SignUp" >
              <a className='App-link'>+ 회원가입</a>
           </Link>
         
