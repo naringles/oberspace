@@ -24,13 +24,13 @@ import { Link } from 'react-router-dom'
 import ImageModal from '../Modals/ImageModal';
 
 import style from 'styled-components'
+import Drive from "../drive";
 
 const ImageGridDiv = style.div`
     display:flex;
   flex-direction: column;
 
 `
-
 const ImageGridName = style.div`
 // margin-left:2px;
 margin: 0 auto;
@@ -163,10 +163,18 @@ class Main extends Component {
                                             className='SearchIcon' />
                                     </div>
 
-                                    <div className='UpLoadFile'>
+                                    <div className="UpLoadFile">
                                         <AiOutlineCloudUpload size={25} />
-                                        <span className='UpLoadFileText'>파일 올리기</span>
-                                    </div>
+                                        <label for="thefile" className="UpLoadFileText">
+                                        <input
+                                            type="file"
+                                            className="UpLoadFileInput"
+                                            onchange="addFile(this);"
+                                            multiple
+                                        />
+                                        파일 올리기
+                                    </label>
+                                </div>
 
                                 </div>
                                 <div className='RightTop_Bottom'>
