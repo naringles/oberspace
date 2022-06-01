@@ -91,7 +91,7 @@ function SignUp(){
           <div className="small-box">
              <HiLockClosed size = "40" color = "#898989"/>
          </div>   
-         <input className="input-box" onChange={(e)=>{(e.target.value)===password ? setPass(true) : setPass(false) }} placeholder='비밀번호 확인' size = "20" />
+         <input className="input-box" onChange={(e)=>{(e.target.value)===password ? setpasswordcheck(true) : setpasswordcheck(false) }} placeholder='비밀번호 확인' size = "20" />
         </div>
         <br/>
 
@@ -116,15 +116,30 @@ function SignUp(){
         <button className="button-box" onClick={() => {setModalIsOpen(true)}} > 
            가입하기
         </button>
-      
-       <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
-        {username}님, 회원가입 완료!
-         <br></br>
+        
+      {passwordcheck == true ? 
+        <div>
+          <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
+            {username}님, 회원가입 완료!
+            <br></br>
             <Link to = "/Login">
                <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
             </Link> 
-       </Modal>
-        <br/><br/><br/><br/><br/>
+          </Modal>
+          <br/><br/><br/><br/><br/>
+        </div>
+
+        :
+
+        <div>
+          <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
+            비밀번호를 확인하세요!
+            <br></br>
+              <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
+          </Modal>
+        </div>
+
+      }
       
      </div>
     </div>
