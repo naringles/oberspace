@@ -384,6 +384,10 @@ select{
   border:0px;
 }
 
+.nameTag{
+  align-items: center;
+}
+
 .AllStorage {
   height: 15vh;
   width: 16vw;

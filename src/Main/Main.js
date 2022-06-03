@@ -156,7 +156,7 @@ function Main() {
         >
           <img
             src={Cat1}
-            style={{ width: "250px", height: "250px" }}
+            style={{ width: "150px", height: "150px" }}
             onRequestClose={true}
           ></img>
         </Modal>
@@ -260,11 +260,14 @@ function Main() {
                        <option value="B">오래된순</option>
                       </select>
                     </div>
-                    <BsListUl size={25} />
                   
-                  <div onClick={() => showPicture()}>
-                    <BsGrid size={22} />
-                  </div>
+                    <div onClick={showPicture}>
+                      {picture ? (
+                      <BsListUl size={25} />
+                      ) : (
+                        <BsGrid size={22} />
+                      )}
+                   </div>
                 </div>
               </div>
             </div>
@@ -292,7 +295,7 @@ function Main() {
                               <div className="GoogleDriveCheckBox">
                                 <label>
                                 <input
-                                  className=""
+                                  className="chk"
                                   type="Checkbox"
                                   onChange={() => allSelect(i)}
                                 />전체선택</label>
@@ -337,7 +340,7 @@ function Main() {
 
                                   <>
                                     <img src={Cat1}></img>
-                                    <div>고양이.jpeg</div>
+                                    <div classname="nameTag">고양이.jpeg</div>
                                   </>
                                 </div>
                               ))}

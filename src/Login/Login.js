@@ -31,10 +31,6 @@ render() {
 
       <div className="join1">
            <Link to = "/SignUp">SIGN UP</Link>
-           <Link to = "/SignUp">
-             <a className='App-link'>+ 회원가입</a>
-          </Link>
-        
       </div>
      </div>
   );
