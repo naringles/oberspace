@@ -64,8 +64,8 @@ function Main() {
       top: "50%",
       left: "50%",
       transform: "translate(-50%, -50%)",
-      width: "200px",
-      height: "200px",
+      width: "300px",
+      height: "300px",
       borderRadius: "14px",
       outline: "none",
       zIndex: 10,
@@ -156,7 +156,7 @@ function Main() {
         >
           <img
             src={Cat1}
-            style={{ width: "150px", height: "150px" }}
+            style={{ width: "300px", height: "300px" }}
             onRequestClose={true}
           ></img>
         </Modal>
