@@ -110,8 +110,6 @@ body {
   line-height: 1;
 }
 
-
-
 ol,
 ul {
   list-style: none;
@@ -136,7 +134,7 @@ table {
 }
 
 .Main {
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -173,16 +171,9 @@ div {
 }
 
 .UserText {
-  margin-top: 9px;
+  margin-top: 10px;
   font-size: 14px;
   color: #898989;
-}
-
-select{
-  color: #898989;
-  font-weight: 400;
-  font-size: 16px;
-  border:0px;
 }
 
 .UserInformationBox {
@@ -192,6 +183,7 @@ select{
 .ChangeInfor {
   width: 300px;
   height: 40px;
+  
   background-color: #d2d2d2;
   display: flex;
   justify-content: center;
@@ -385,6 +377,13 @@ progress {
   border-radius: 15px;
 }
 
+select{
+  color: #898989;
+  font-weight: 400;
+  font-size: 16px;
+  border:0px;
+}
+
 .AllStorage {
   height: 15vh;
   width: 16vw;
@@ -420,8 +419,6 @@ progress {
   justify-content: space-around;
   margin-left: 12px;
 }
-
-
 
 .Search {
   width: 16vw;
@@ -480,7 +477,6 @@ progress {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .GoogleDriveCheckBox {

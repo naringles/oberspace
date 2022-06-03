@@ -32,7 +32,7 @@ div {
   height: 80vh;
   background-color: #ececec;
   margin-top: 15vh;
-  margin:auto;
+
   margin-right: 8vw;
 }
 
@@ -115,6 +115,12 @@ div {
   margin-bottom: 15vh;
 }
 
+.L {
+  width: 4.5vw;
+  height: 4.5vh;
+  margin-bottom: 2vh;
+}
+
 .LinkedAccountText {
   font-size: 22px;
 }
@@ -157,7 +163,7 @@ div {
 }
 
 .OneDriveDel{
-  margin-left: 10vw; 
+  margin-left: 9vw; 
   margin-top: 1.3vh;
 }
 

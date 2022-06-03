@@ -18,7 +18,9 @@ class Compare extends Component {
 render() {
   return (
     <div className="MenuList">
-
+    <div className="Logo">
+      <img className="L" src={require("../LogoImage.jpeg")} />
+    </div>
     <Link to ="/a">
       <div className='MenuUserIcon'>
         <AiOutlineUser size="40" color='gray' className='AB' />

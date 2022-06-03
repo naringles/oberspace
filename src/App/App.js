@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import "./A.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineFolder } from "react-icons/ai";
@@ -6,27 +6,15 @@ import { AiOutlineSwap } from "react-icons/ai";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { BiMenu } from "react-icons/bi";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { AiOutlineCloud } from "react-icons/ai";
 
-<<<<<<< HEAD
 import Main from "../Main/index";
 import styled from "styled-components";
 import Login from "../Login";
 import SignUp from "../SignUp/SignUp";
+import Compare from "../Compare";
 import Swal from "sweetalert2";
-import User from "../user";
-import Compare from "../Compare"
-=======
-import { BiMenu } from 'react-icons/bi'
-import { AiOutlineCloud } from 'react-icons/ai'
-
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-
-import Main from '../Main/index';
-import styled from 'styled-components';
-import Login from '../Login';
-import SignUp from '../SignUp/SignUp';
-import F_Login from '../F_Login/F_Login';
->>>>>>> main
+import { data1 } from "../data";
 
 class Rr extends Component {
   constructor(props) {
@@ -52,39 +40,11 @@ class Rr extends Component {
     });
   };
 
-<<<<<<< HEAD
   OneDriveNotShow = () => {
     this.setState({
       oneDriveShow: false,
     });
   };
-=======
-  render(){
-  return (
-    <BrowserRouter>
-      <Routes>
-          <Route path="/" element={<Main
-          test = {this.state.test} testtrue = {this.testtrue} parentFunction={this.parentFunction}
-          ShowGoogleDrive ={this.state.ShowGoogleDrive}
-          GoogleDriveChange ={this.GoogleDriveChange}
-          ></Main>}></Route>
-          <Route path="/a" element={<App
-          test = {this.state.test}
-          ShowGoogleDrive = {this.state.ShowGoogleDrive}
-          ShowOneDrive = {this.state.ShowOneDrive}
-          ShowMegaDrive = {this.state.ShowMegaDrive}
-          ></App>}></Route>
-          <Route path="/Login" element={<Login
-          
-          ></Login>}></Route>
-          <Route path="/SignUp" element={<SignUp
-          
-          ></SignUp>}></Route>
-           <Route path="/F_Login" element={<F_Login
-          
-          ></F_Login>}></Route>
-      </Routes>
->>>>>>> main
 
   MegaDriveShow = () => {
     this.setState({
@@ -166,66 +126,153 @@ const MenuUserIcon = styled.div`
   border-radius: 15px;
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <html>
-        <body>
-          <div className="Main">
-            <div className="Left">
-              <div className="MenuList">
-                <MenuUserIcon>
-                  <AiOutlineUser size="40" color="gray" className="AB" />
-                </MenuUserIcon>
+function App() {
+  const [driveMap, setDriveMap] = useState(
+    () => JSON.parse(window.localStorage.getItem("data")) || data1
+  );
 
-                <Link to="/">
-                  <BiMenu size="40" color="gray" />
-                </Link>
+  useEffect(() => {
+    window.localStorage.setItem("data", JSON.stringify(driveMap));
+  }, [driveMap]);
 
-                <AiOutlineFolder size="40" color="gray" />
+  const deleteDrive = (str, i) => {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: "btn btn-success",
+      },
+      buttonsStyling: false,
+    });
 
-                <Link to ="/Compare">
-                  <AiOutlineExclamationCircle size="40" color='gray' />
-                </Link>
-                
-                <span
-                  onClick={() => {
-                    console.log(this.props.ShowGoogleDrive);
-                  }}
-                >
-                  {" "}
-                </span>
+    swalWithBootstrapButtons
+      .fire({
+        title: `${str} 해지하시겠습니까?`,
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes",
+        cancelButtonText: "No",
+        reverseButtons: false,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+            `${str} 해지되었습니다`,
+            "",
+            "success"
+          );
+
+          setDriveMap(
+            driveMap.map((data) => ({
+              ...data,
+              value: data.id !== i ? data.value : "",
+            }))
+          );
+          console.log(driveMap);
+        }
+      });
+  };
+
+  return (
+    <html>
+      <body>
+        <div className="Main">
+          <div className="Left">
+            <div className="MenuList">
+              <div className="Logo">
+                <img className="L" src={require("../LogoImage.jpeg")} />
               </div>
-              <LeftMain>
-                <div className="UserIconBox">
-                  <AiOutlineUser size="80" color="gray" />
-                </div>
-                <span className="UserText">USER</span>
-                <div className="UserInformationBox">
-                  <div>ID : kmu2022</div>
-                  <div>e-mail : kmu2022@naver.com</div>
-                </div>
-
-                <div className="ChangeInfor">
-                  <span className="ChangeInforText">정보 수정</span>
-                </div>
-                <div className="DeleteAccount">
-                  <span className="DeleteAccountText">계정 탈퇴</span>
-                </div>
-              </LeftMain>
+              <MenuUserIcon>
+                <AiOutlineUser size="40" color="gray" className="AB" />
+              </MenuUserIcon>
+              <Link to="/">
+                <BiMenu size="40" color="gray" />
+              </Link>
+              <AiOutlineFolder size="40" color="gray" />
+              <Link to="/Compare">
+                <div className="MenuUserIcon1">
+                  <AiOutlineExclamationCircle size="40" color="gray" />
+                </div> 
+              </Link>
+              <span
+                onClick={() => {
+                  console.log(this.props.ShowGoogleDrive);
+                }}
+              >
+                {" "}
+              </span>
             </div>
+            <LeftMain>
+              <div className="UserIconBox">
+                <AiOutlineUser size="80" color="gray" />
+              </div>
+              <span className="UserText">USER</span>
+              <div className="UserInformationBox">
+                <div>ID : kmu2022</div>
+                <div>e-mail : kmu2022@naver.com</div>
+              </div>
 
-            <div className="Hr"></div>
-
-            <div className="RightMain">
-              <div className="Right1"></div>
-              <User />
-            </div>
+              <div className="ChangeInfor">
+                <span className="ChangeInforText">정보 수정</span>
+              </div>
+              <div className="DeleteAccount">
+                <span className="DeleteAccountText">계정 탈퇴</span>
+              </div>
+            </LeftMain>
           </div>
-        </body>
-      </html>
-    );
-  }
+
+          <div className="Hr"></div>
+
+          <div className="RightMain">
+            <div className="Right1"></div>
+            <>
+              {driveMap.map((item, i) => (
+                <>
+                  {item.value !== "" ? (
+                    <div className="CloudBox">
+                      <div className="CloudBoxUp">
+                        <div className="">
+                          <AiOutlineCloud size="40" />
+                        </div>
+                        <div className="CloudBoxUpText">
+                          <div className="GoogleDriveText">
+                            {item.value[0]}
+                            <span
+                              className="OneDriveDel"
+                              onClick={() => deleteDrive(item.value[0], i)}
+                            >
+                             계정해제
+                            </span>
+                          </div>
+                          <span>string</span>
+                        </div>
+                      </div>
+
+                      <div className="ProgressDiv">
+                        <progress
+                          value="50"
+                          max="80"
+                          className={
+                            item.value[1] === "Progress"
+                              ? "Progress"
+                              : item.value[1] === "OneDriveProgress"
+                              ? "OneDriveProgress"
+                              : "MegaDriveProgress"
+                          }
+                        />
+                      </div>
+
+                      <span className="StorageVolume">50GB / 80GB</span>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </>
+              ))}
+            </>
+          </div>
+        </div>
+      </body>
+    </html>
+  );
 }
 
 export default Rr;
