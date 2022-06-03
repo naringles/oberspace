@@ -11,12 +11,14 @@
     "express": "^4.18.1",
     "react": "^18.1.0",
     "react-bootstrap": "^2.3.1",
+    "react-bootstrap-select": "^0.14.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
     "react-modal": "^3.15.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
+    "sweetalert2": "^11.4.17",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
