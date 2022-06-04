@@ -27,6 +27,13 @@ import Compare from "../Compare";
 
 import style from "styled-components";
 
+//수정해야할것
+
+//List UI랑 Grid UI 바꾸는 아이콘 서로 반대로 바껴야해
+//그리고 첫 화면은 Grid UI가 좋겠어
+//개인 정보창이랑 메인창 전환할때 메뉴 위치가 바뀐다.
+//메뉴 4개로 바껴서 간격이 좀 있는게 좋을듯
+
 // import LogoImage from '../LogoImage.jpeg';
 
 function Main() {

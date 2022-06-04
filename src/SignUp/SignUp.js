@@ -10,41 +10,12 @@ import {HiMail} from "react-icons/hi";
 
 import Modal from 'react-modal';
 import {Route, Link} from 'react-router-dom';
+import swal from "sweetalert"
 
 //TODO
 // 아이콘 정렬
 
-/*
-           <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
-           <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
-           </Modal>
 
-*/
-const ModalStyle = {
-	overlay: {
-		position: "flexed",
-		top: 0,
-		left: 0,
-		right: 0,
-		bottom: 0,
-		backgroundColor: "rgba(255, 255, 255, 0.45)",
-		zIndex: 10,
-	},
-	content: {
-		display: "flex",
-		justifyContent: "center",
-		background: "#ffffff",
-		overflow: "auto",
-		top: "42vh",
-		left: "38vw",
-		right: "38vw",
-		bottom: "42vh",
-		WebkitOverflowScrolling: "touch",
-		borderRadius: "14px",
-		outline: "none",
-		zIndex: 10,
-	},
-};
 
 function SignUp(){ 
 
@@ -113,33 +84,20 @@ function SignUp(){
         <br/><br/><br/>
         
 
-        <button className="button-box" onClick={() => {setModalIsOpen(true)}} > 
+        <button className="button-box" onClick={() => {
+          {passwordcheck==true?
+            swal("가입완료!", "환영합니다!", "success")
+            .then(()=>{
+              window.location.replace('/Login');
+            })
+          :
+           swal("가입실패!", "비밀번호를 확인하세요!", "warning")
+          }
+        }} > 
            가입하기
         </button>
         
-      {passwordcheck == true ? 
-        <div>
-          <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
-            {username}님, 회원가입 완료!
-            <br></br>
-            <Link to = "/Login">
-               <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
-            </Link> 
-          </Modal>
-          <br/><br/><br/><br/><br/>
-        </div>
-
-        :
-
-        <div>
-          <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
-            비밀번호를 확인하세요!
-            <br></br>
-              <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
-          </Modal>
-        </div>
-
-      }
+      
       
      </div>
     </div>
