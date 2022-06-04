@@ -12,7 +12,7 @@ import Modal from 'react-modal';
 import {Route, Link} from 'react-router-dom';
 
 //TODO
-// 아이콘 정렬, 모달 창 두가지로 뜨게 하는 방법 찾기
+// 아이콘 정렬
 
 /*
            <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
