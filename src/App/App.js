@@ -12,6 +12,7 @@ import Main from "../Main/index";
 import styled from "styled-components";
 import Login from "../Login";
 import SignUp from "../SignUp/SignUp";
+import F_Login from "../F_Login/F_Login"
 import Compare from "../Compare";
 import Swal from "sweetalert2";
 import { data1 } from "../data";
@@ -232,7 +233,6 @@ function App() {
                     if (willLogout) {
                       swal("로그아웃 완료!", {
                       icon: "success",
-                      buttons: true
                     })
                     .then(()=>{
                       window.location.replace('/Login');

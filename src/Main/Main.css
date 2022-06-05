@@ -201,6 +201,20 @@ div {
   align-items: center;
 }
 
+.inputfileButton{
+  width: 120px;
+  height: 40px;
+  background-color: #DCDCDC;
+  border :0;
+  outline: 0;
+  border-radius: 8px;
+}
+
+.fontColor{
+   color : #ffffff;
+   font-style:bolt;
+}
+
 .UserIconBox {
   width: 120px;
   height: 120px;
