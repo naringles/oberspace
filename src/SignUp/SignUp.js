@@ -10,41 +10,12 @@ import {HiMail} from "react-icons/hi";
 
 import Modal from 'react-modal';
 import {Route, Link} from 'react-router-dom';
+import swal from "sweetalert"
 
 //TODO
-// 아이콘 정렬, 모달 창 두가지로 뜨게 하는 방법 찾기
+// 아이콘 정렬, 비밀번호 확인 입력 후 비밀번호만 바꿨을때도 판별하도록 수정해야함
 
-/*
-           <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
-           <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
-           </Modal>
 
-*/
-const ModalStyle = {
-	overlay: {
-		position: "flexed",
-		top: 0,
-		left: 0,
-		right: 0,
-		bottom: 0,
-		backgroundColor: "rgba(255, 255, 255, 0.45)",
-		zIndex: 10,
-	},
-	content: {
-		display: "flex",
-		justifyContent: "center",
-		background: "#ffffff",
-		overflow: "auto",
-		top: "42vh",
-		left: "38vw",
-		right: "38vw",
-		bottom: "42vh",
-		WebkitOverflowScrolling: "touch",
-		borderRadius: "14px",
-		outline: "none",
-		zIndex: 10,
-	},
-};
 
 function SignUp(){ 
 
@@ -83,7 +54,7 @@ function SignUp(){
           <div className="small-box">
              <HiOutlineKey size = "40" color = "#898989" />
           </div> 
-          <input className="input-box" onChange={(e)=>{setpassword(e.target.value)}} placeholder='비밀번호' size = "20" />
+          <input className="input-box" type="password" onChange={(e)=>{setpassword(e.target.value)}} placeholder='비밀번호' size = "20" />
         </div>
         <br/>
 
@@ -91,7 +62,7 @@ function SignUp(){
           <div className="small-box">
              <HiLockClosed size = "40" color = "#898989"/>
          </div>   
-         <input className="input-box" onChange={(e)=>{(e.target.value)===password ? setPass(true) : setPass(false) }} placeholder='비밀번호 확인' size = "20" />
+         <input className="input-box" type="password" onChange={(e)=>{(e.target.value)===password ? setpasswordcheck(true) : setpasswordcheck(false) }} placeholder='비밀번호 확인' size = "20" />
         </div>
         <br/>
 
@@ -113,18 +84,20 @@ function SignUp(){
         <br/><br/><br/>
         
 
-        <button className="button-box" onClick={() => {setModalIsOpen(true)}} > 
+        <button className="button-box" onClick={() => {
+          {passwordcheck==true?
+            swal("가입완료!", "환영합니다!", "success")
+            .then(()=>{
+              window.location.replace('/Login');
+            })
+          :
+           swal("가입실패!", "비밀번호를 확인하세요!", "warning")
+          }
+        }} > 
            가입하기
         </button>
+        
       
-       <Modal style = {ModalStyle} isOpen= {modalIsOpen} >
-        {username}님, 회원가입 완료!
-         <br></br>
-            <Link to = "/Login">
-               <button className="modal-button" onClick={()=> setModalIsOpen(false)}>닫기</button>
-            </Link> 
-       </Modal>
-        <br/><br/><br/><br/><br/>
       
      </div>
     </div>
