@@ -46,6 +46,12 @@ function Main() {
   const [picture, setPicture] = useState(false);
   const [line, setLine]=useState(true);
 
+  const [checked, setChecked] = useState([
+    { id: 0, bool: false },
+    { id: 1, bool: false },
+    { id: 2, bool: false },
+  ]);
+
   const modalStyle = {
     overlay: {
       position: "fixed",
@@ -80,9 +86,10 @@ function Main() {
     // this.props.parentFunction("AB");
   };
 
-  const showPicture = () => {
-    setPicture(!picture);
+  const showPicture = (bool) => {
+    setPicture(bool);
   };
+
 
   const [datum, setDatum] = useState(
     () => JSON.parse(window.localStorage.getItem("data")) || data1
@@ -132,12 +139,13 @@ function Main() {
   });
 
   const allSelect = (key) => {
-    setDatum(
-      datum.map((data) => ({
-        ...data,
-        allCheck: data.id === key ? !data.allCheck : data.allCheck,
+    setChecked(
+      checked.map((check) => ({
+        ...check,
+        bool: check.id === key ? !check.bool : check.bool,
       }))
     );
+    console.log(datum);
   };
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -260,14 +268,12 @@ function Main() {
                        <option value="B">오래된순</option>
                       </select>
                     </div>
-                  
-                    <div onClick={showPicture}>
-                      {picture ? (
-                      <BsListUl size={25} />
-                      ) : (
-                        <BsGrid size={22} />
-                      )}
-                   </div>
+                    <div onClick={() => showPicture(false)}>
+                    <BsListUl size={25} />
+                  </div>
+                  <div onClick={() => showPicture(true)}>
+                    <BsGrid size={22} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -324,7 +330,7 @@ function Main() {
                             <div className="ImageGrid">
                               {defaultImage.map(() => (
                                 <div style={{ position: "relative" }}>
-                                  {item.allCheck ? (
+                                  {checked[i].bool ? (
                                     <input
                                       type="checkbox"
                                       style={{
@@ -335,7 +341,14 @@ function Main() {
                                       checked="checked"
                                     />
                                   ) : (
-                                    <></>
+                                    <input
+                                      type="checkbox"
+                                      style={{
+                                        position: "absolute",
+                                        top: 0,
+                                        left: "0",
+                                      }}
+                                    />
                                   )}
 
                                   <>
@@ -352,7 +365,7 @@ function Main() {
                             >
                               {defaultImage.map(() => (
                                 <div style={{ position: "relative" }}>
-                                  {item.allCheck ? (
+                                 {checked[i].bool ? (
                                     <input
                                       type="checkbox"
                                       style={{
@@ -363,7 +376,14 @@ function Main() {
                                       checked="checked"
                                     />
                                   ) : (
-                                    <></>
+                                    <input
+                                      type="checkbox"
+                                      style={{
+                                        position: "absolute",
+                                        top: 0,
+                                        left: "-20px",
+                                      }}
+                                    />
                                   )}
 
                                   <div style={{ width: "400px" }}>
