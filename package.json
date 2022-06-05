@@ -20,10 +20,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
-<<<<<<< HEAD
     "sweetalert": "^2.1.2",
-=======
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
     "sweetalert2": "^11.4.17",
     "web-vitals": "^2.1.0"
   },
