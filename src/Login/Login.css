@@ -91,6 +91,9 @@ input{
   font-size:20px;
   line-height: 24px;
   color: #898989;
+  text-decoration-line: none;
+  
+  
 }
 
 body {
@@ -131,4 +134,8 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.a {
+  text-decoration: none;
 }

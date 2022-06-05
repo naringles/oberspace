@@ -2,8 +2,7 @@ import React, {useState,Component} from 'react';
 import './Login.css';
 import { AiFillLock,AiOutlineUser} from "react-icons/ai";
 import {Route, Link} from 'react-router-dom';
-
-//+회원가입 밑줄 없애기
+import swal from "sweetalert"
 
 class Login extends Component {
 render() {
@@ -27,11 +26,19 @@ render() {
         <input type="password" className="loginPw" placeholder='  비밀번호'></input>
       </div>
       
-      <Link to = "/">
-          <input type="submit" className="login" value="로그인"></input>
-      </Link>
+      <input type="submit" className="login" value="로그인" 
+      onClick = {()=>{
+        swal("로그인 성공", "환영합니다", "success")
+            .then(()=>{
+              window.location.replace('/');
+            })
+      }}></input>
+      
       <div className="join1">
-           <Link to = "/SignUp">SIGN UP</Link>
+           <Link className="a" to = "/SignUp" >
+             <a className='App-link'>+ 회원가입</a>
+          </Link>
+        
       </div>
      </div>
   );
