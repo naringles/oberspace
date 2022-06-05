@@ -18,6 +18,7 @@ import { AiOutlineVideoCamera } from "react-icons/ai";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import Swal from "sweetalert2";
+import swal from '@sweetalert/with-react'
 
 import Cat1 from "../cat1.jpeg";
 import { Link } from "react-router-dom";
@@ -52,6 +53,12 @@ function Main() {
   let three = true;
   const [picture, setPicture] = useState(false);
   const [line, setLine]=useState(true);
+
+  const options = [
+    'd1', 'd2', 'd3'
+  ];
+
+  
 
   const modalStyle = {
     overlay: {
@@ -153,6 +160,26 @@ function Main() {
     setModalIsOpen(true);
   };
 
+  const onPick = value => {
+    swal("Thanks for your rating!", `You rated us ${value}/3`, "success")
+  }
+   
+  const MoodButton = ({ rating, onClick }) => (
+    <button 
+      data-rating={rating}
+      className="mood-btn" 
+      onClick={() => onClick(rating)}
+    />
+  )
+  const fileInput = () =>{
+     <input
+      type="file"
+      className="UpLoadFileInput"
+      onchange="addFile(this);"
+      multiple
+    />
+  }
+
   return (
     <html>
       <body>
@@ -240,15 +267,47 @@ function Main() {
                   />
                 </div>
 
-                <div className="UpLoadFile">
+                <div className="UpLoadFile" onClick={function(){
+                  swal({
+                    className : "swalcss",
+                    text: "파일 업로드를 진행할 드라이브 선택",
+                    icon: "info",
+                    buttons: {
+                      d1 : {
+                        text : "google drive",
+                        value : "d1",
+                      },
+                      d2 : {
+                        text: "mega drive",
+                        value : "d2",
+                      },
+                      d3 : {
+                        text : "one drive",
+                        value : "d2",
+                      },
+                      cancel: "Close",
+                    },
+                  })
+                  .then((value)=>{
+                    switch(value){
+                      case "d1" : 
+                        swal("선택완료!", "google drive 선택", "success");
+                        break;
+                      case "d2" : 
+                        swal("선택완료!", "Mega drive 선택", "success");
+                        break;
+                      case "d3" : 
+                        swal("선택완료!", "one drive 선택", "success");
+                        break;
+                    }
+                  })
+                  .then(()=>{
+                    document.getElementById("file").select();
+                  })
+                  ;
+                }}>
                   <AiOutlineCloudUpload size={25} />
                   <label className="UpLoadFileText">
-                    <input
-                      type="file"
-                      className="UpLoadFileInput"
-                      onchange="addFile(this);"
-                      multiple
-                    />
                     파일 올리기
                   </label>
                 </div>

@@ -13,7 +13,7 @@ import {Route, Link} from 'react-router-dom';
 import swal from "sweetalert"
 
 //TODO
-// 아이콘 정렬
+// 아이콘 정렬, 비밀번호 확인 입력 후 비밀번호만 바꿨을때도 판별하도록 수정해야함
 
 
 

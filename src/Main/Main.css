@@ -577,3 +577,15 @@ img {
   align-items: center;
   justify-content: center;
 }
+
+.drive-btn{
+  width :12vh;
+  height :7.2vh;
+  color: #898989;
+  font-style: #DCDCDC;
+}
+
+.swalcss{
+  align-items: center;
+  text-align: center;
+}
