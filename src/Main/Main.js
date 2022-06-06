@@ -27,7 +27,6 @@ import Modal from "react-modal";
 import Compare from "../Compare";
 
 import style from "styled-components";
-import { DropdownButton,Dropdown } from "react-bootstrap";
 
 //수정해야할것
 
@@ -57,11 +56,6 @@ function Main() {
   const [picture, setPicture] = useState(false);
   const [line, setLine]=useState(true);
 
-  const options = [
-    'd1', 'd2', 'd3'
-  ];
-
-  
   const [checked, setChecked] = useState([
     { id: 0, bool: false },
     { id: 1, bool: false },
@@ -257,8 +251,6 @@ function Main() {
                   />
                 </div>
 
-
-              
                 <div className="UpLoadFile" onClick = {()=>{
                     swal({
                       title : "드라이브 선택",
@@ -304,16 +296,14 @@ function Main() {
                   <AiOutlineCloudUpload size={25} />
                       파일 업로드      
                 </div>
-              
 
               </div>
-              
               <div className="RightTop_Bottom">
                 <div className="RightTop_Bottom_Menu">
                 <div className='Edit'>
                     <select>
                       <option value="A">편집</option>
-                      <option value="B">삭제</option>
+                      <option value="B">1</option>
                     </select>
                   </div>
                   <div className="LatestOrder">
