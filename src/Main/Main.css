@@ -501,9 +501,13 @@ select{
 .Document,
 .Video,
 .Music {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: flex;
-  align-items: center;
+  align-items: left;
+  text-align: left;
+  align-items: flex-start;
+  margin-right: 150px;
+  justify-content: flex-start;
 }
 
 .Picture {
@@ -580,4 +584,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.drive-btn{
+  width :12vh;
+  height :7.2vh;
+  color: #898989;
+  font-style: #DCDCDC;
+}
+
+.swalcss{
+  align-items: center;
+  text-align: center;
 }

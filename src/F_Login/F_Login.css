@@ -18,7 +18,7 @@
     width:500px;
     height:64px;
     background:#DCDCDC;
-     border: 2px solid #DCDCDC;
+    border: 2px solid #DCDCDC;
     box-sizing: border-box;
    
   }
@@ -39,4 +39,9 @@
    color: #898989;
   text-decoration: none;
 }
+
+.a2 {
+  text-decoration: none;
+}
+
 

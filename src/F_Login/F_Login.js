@@ -20,7 +20,7 @@ render() {
       </Link>
 
       <div className="join2">
-           <Link to = "/SignUp">
+           <Link className= "a2" to = "/SignUp">
              <a className='App-link'>+ 회원가입</a>
           </Link>
         
