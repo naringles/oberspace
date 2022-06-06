@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
+import { debounce } from 'lodash';
 import "./Main.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineFolder } from "react-icons/ai";
@@ -18,6 +19,7 @@ import { AiOutlineVideoCamera } from "react-icons/ai";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import Swal from "sweetalert2";
+import swal from '@sweetalert/with-react'
 
 import Cat1 from "../cat1.jpeg";
 import { Link } from "react-router-dom";
@@ -26,6 +28,15 @@ import Modal from "react-modal";
 import Compare from "../Compare";
 
 import style from "styled-components";
+
+//수정해야할것
+
+//List UI랑 Grid UI 바꾸는 아이콘 서로 반대로 바껴야해
+//첫 화면은 Grid UI로 설정
+//개인 정보창이랑 메인창 전환할때 메뉴 위치가 바뀜 설정
+//젤 왼쪽 메뉴 간격 띄우기
+//드라이브 선택 취소버튼 구현
+//map에 continue 기능 있는지 알아보기
 
 // import LogoImage from '../LogoImage.jpeg';
 
@@ -45,6 +56,29 @@ function Main() {
   let three = true;
   const [picture, setPicture] = useState(false);
   const [line, setLine]=useState(true);
+
+  const ResizedComponent = () => {
+    const[windowSize, setWindowSize] = useState({
+      width: window.innerWidth,
+      height: window. innerHeight
+    })
+ 
+  const handleResize = debounce(() => {
+    setWindowSize({
+      width:window.innerWidth,
+      height: window. innerHeight
+    });
+  },1000);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  },[]);
+  return <div>브라우저 화면 사이즈 {window.width}, y: {window.height}</div>
+}
+
 
   const [checked, setChecked] = useState([
     { id: 0, bool: false },
@@ -241,18 +275,52 @@ function Main() {
                   />
                 </div>
 
-                <div className="UpLoadFile">
+                <div className="UpLoadFile" onClick = {()=>{
+                    swal({
+                      title : "드라이브 선택",
+                      text: "업로드할 드라이브를 선택해주세요!",
+                      buttons: "OK",
+                      content: (
+                        <select>
+                        {datum.map((item,i)=>(
+                            <>
+                            {item.value[0] !==""?(
+                              <>
+                                <option value={i}>{item.value[0]}</option>
+                              </>
+                            ): true}
+                          </>
+                        ) 
+                        )}  
+                        </select>
+                      )
+                    }).then((OK)=>{
+                      swal({
+                        title: "파일 검색",
+                        text : "파일을 선택해주세요!",
+                        content:(
+                          <button className="inputfileButton">
+                            <input
+                            type="file"
+                            className="UpLoadFileInput"
+                            onchange="addFile(this);"
+                            multiple /> 
+                            <span className="fontColor">파일 검색</span>
+                          </button>
+                        )
+                      }).then(()=>{
+                        swal({
+                           title : "업로드 완료!", 
+                           icon: "success"
+                        })
+                      })
+                    })
+                  }}
+                  >
                   <AiOutlineCloudUpload size={25} />
-                  <label className="UpLoadFileText">
-                    <input
-                      type="file"
-                      className="UpLoadFileInput"
-                      onchange="addFile(this);"
-                      multiple
-                    />
-                    파일 올리기
-                  </label>
+                      파일 업로드      
                 </div>
+
               </div>
               <div className="RightTop_Bottom">
                 <div className="RightTop_Bottom_Menu">
