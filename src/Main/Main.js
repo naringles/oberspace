@@ -18,10 +18,7 @@ import { AiOutlineVideoCamera } from "react-icons/ai";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import Swal from "sweetalert2";
-<<<<<<< HEAD
 import swal from '@sweetalert/with-react'
-=======
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
 
 import Cat1 from "../cat1.jpeg";
 import { Link } from "react-router-dom";
@@ -30,16 +27,15 @@ import Modal from "react-modal";
 import Compare from "../Compare";
 
 import style from "styled-components";
-<<<<<<< HEAD
 
 //수정해야할것
 
 //List UI랑 Grid UI 바꾸는 아이콘 서로 반대로 바껴야해
-//그리고 첫 화면은 Grid UI가 좋겠어
-//개인 정보창이랑 메인창 전환할때 메뉴 위치가 바뀐다.
-//메뉴 4개로 바껴서 간격이 좀 있는게 좋을듯
-=======
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
+//첫 화면은 Grid UI로 설정
+//개인 정보창이랑 메인창 전환할때 메뉴 위치가 바뀜 설정
+//젤 왼쪽 메뉴 간격 띄우기
+//드라이브 선택 취소버튼 구현
+//map에 continue 기능 있는지 알아보기
 
 // import LogoImage from '../LogoImage.jpeg';
 
@@ -60,19 +56,11 @@ function Main() {
   const [picture, setPicture] = useState(false);
   const [line, setLine]=useState(true);
 
-<<<<<<< HEAD
-  const options = [
-    'd1', 'd2', 'd3'
-  ];
-
-  
-=======
   const [checked, setChecked] = useState([
     { id: 0, bool: false },
     { id: 1, bool: false },
     { id: 2, bool: false },
   ]);
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
 
   const modalStyle = {
     overlay: {
@@ -108,18 +96,11 @@ function Main() {
     // this.props.parentFunction("AB");
   };
 
-<<<<<<< HEAD
-  const showPicture = () => {
-    setPicture(!picture);
-  };
-
-=======
   const showPicture = (bool) => {
     setPicture(bool);
   };
 
 
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
   const [datum, setDatum] = useState(
     () => JSON.parse(window.localStorage.getItem("data")) || data1
   );
@@ -168,14 +149,6 @@ function Main() {
   });
 
   const allSelect = (key) => {
-<<<<<<< HEAD
-    setDatum(
-      datum.map((data) => ({
-        ...data,
-        allCheck: data.id === key ? !data.allCheck : data.allCheck,
-      }))
-    );
-=======
     setChecked(
       checked.map((check) => ({
         ...check,
@@ -183,7 +156,6 @@ function Main() {
       }))
     );
     console.log(datum);
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
   };
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -192,29 +164,6 @@ function Main() {
     setModalIsOpen(true);
   };
 
-<<<<<<< HEAD
-  const onPick = value => {
-    swal("Thanks for your rating!", `You rated us ${value}/3`, "success")
-  }
-   
-  const MoodButton = ({ rating, onClick }) => (
-    <button 
-      data-rating={rating}
-      className="mood-btn" 
-      onClick={() => onClick(rating)}
-    />
-  )
-  const fileInput = () =>{
-     <input
-      type="file"
-      className="UpLoadFileInput"
-      onchange="addFile(this);"
-      multiple
-    />
-  }
-
-=======
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
   return (
     <html>
       <body>
@@ -302,62 +251,52 @@ function Main() {
                   />
                 </div>
 
-<<<<<<< HEAD
-                <div className="UpLoadFile" onClick={function(){
-                  swal({
-                    className : "swalcss",
-                    text: "파일 업로드를 진행할 드라이브 선택",
-                    icon: "info",
-                    buttons: {
-                      d1 : {
-                        text : "google drive",
-                        value : "d1",
-                      },
-                      d2 : {
-                        text: "mega drive",
-                        value : "d2",
-                      },
-                      d3 : {
-                        text : "one drive",
-                        value : "d2",
-                      },
-                      cancel: "Close",
-                    },
-                  })
-                  .then((value)=>{
-                    switch(value){
-                      case "d1" : 
-                        swal("선택완료!", "google drive 선택", "success");
-                        break;
-                      case "d2" : 
-                        swal("선택완료!", "Mega drive 선택", "success");
-                        break;
-                      case "d3" : 
-                        swal("선택완료!", "one drive 선택", "success");
-                        break;
-                    }
-                  })
-                  .then(()=>{
-                    document.getElementById("file").select();
-                  })
-                  ;
-                }}>
+                <div className="UpLoadFile" onClick = {()=>{
+                    swal({
+                      title : "드라이브 선택",
+                      text: "업로드할 드라이브를 선택해주세요!",
+                      buttons: "OK",
+                      content: (
+                        <select>
+                        {datum.map((item,i)=>(
+                            <>
+                            {item.value[0] !==""?(
+                              <>
+                                <option value={i}>{item.value[0]}</option>
+                              </>
+                            ): true}
+                          </>
+                        ) 
+                        )}  
+                        </select>
+                      )
+                    }).then((OK)=>{
+                      swal({
+                        title: "파일 검색",
+                        text : "파일을 선택해주세요!",
+                        content:(
+                          <button className="inputfileButton">
+                            <input
+                            type="file"
+                            className="UpLoadFileInput"
+                            onchange="addFile(this);"
+                            multiple /> 
+                            <span className="fontColor">파일 검색</span>
+                          </button>
+                        )
+                      }).then(()=>{
+                        swal({
+                           title : "업로드 완료!", 
+                           icon: "success"
+                        })
+                      })
+                    })
+                  }}
+                  >
                   <AiOutlineCloudUpload size={25} />
-                  <label className="UpLoadFileText">
-=======
-                <div className="UpLoadFile">
-                  <AiOutlineCloudUpload size={25} />
-                  <label className="UpLoadFileText">
-                    <input
-                      type="file"
-                      className="UpLoadFileInput"
-                      onchange="addFile(this);"
-                      multiple
-                    />
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
-                    파일 올리기
-                  </label>
+                      파일 업로드      
                 </div>
+
               </div>
               <div className="RightTop_Bottom">
                 <div className="RightTop_Bottom_Menu">
@@ -373,23 +312,12 @@ function Main() {
                        <option value="B">오래된순</option>
                       </select>
                     </div>
-<<<<<<< HEAD
-                  
-                    <div onClick={showPicture}>
-                      {picture ? (
-                      <BsListUl size={25} />
-                      ) : (
-                        <BsGrid size={22} />
-                      )}
-                   </div>
-=======
                     <div onClick={() => showPicture(false)}>
                     <BsListUl size={25} />
                   </div>
                   <div onClick={() => showPicture(true)}>
                     <BsGrid size={22} />
                   </div>
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
                 </div>
               </div>
             </div>
@@ -422,33 +350,6 @@ function Main() {
                                   onChange={() => allSelect(i)}
                                 />전체선택</label>
                               </div>
-<<<<<<< HEAD
-                            </div>
-
-                            <div className="ProgressDiv">
-                              <progress
-                                value="50"
-                                
-                                max="80"
-                                className={
-                                  item.value[1] === "Progress"
-                                    ? "Progress"
-                                    : item.value[1] === "OneDriveProgress"
-                                    ? "OneDriveProgress"
-                                    : "MegaDriveProgress"
-                                }
-                              />
-                            </div>
-
-                            <span className="StorageVolume">50GB / 80GB</span>
-                          </div>
-
-                          {picture ? (
-                            <div className="ImageGrid">
-                              {defaultImage.map(() => (
-                                <div style={{ position: "relative" }}>
-                                  {item.allCheck ? (
-=======
                             </div>
 
                             <div className="ProgressDiv">
@@ -509,41 +410,6 @@ function Main() {
                               {defaultImage.map(() => (
                                 <div style={{ position: "relative" }}>
                                  {checked[i].bool ? (
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
-                                    <input
-                                      type="checkbox"
-                                      style={{
-                                        position: "absolute",
-<<<<<<< HEAD
-                                        top: 0,
-                                        left: "0",
-=======
-                                        top: "0",
-                                        left: "-20px",
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
-                                      }}
-                                      checked="checked"
-                                    />
-                                  ) : (
-<<<<<<< HEAD
-                                    <></>
-                                  )}
-
-                                  <>
-                                    <img src={Cat1}></img>
-                                    <div classname="nameTag">고양이.jpeg</div>
-                                  </>
-                                </div>
-                              ))}
-                            </div>
-                          ) : (
-                            <div
-                              className="ImageGrid"
-                              style={{ display: "block" }}
-                            >
-                              {defaultImage.map(() => (
-                                <div style={{ position: "relative" }}>
-                                  {item.allCheck ? (
                                     <input
                                       type="checkbox"
                                       style={{
@@ -554,18 +420,6 @@ function Main() {
                                       checked="checked"
                                     />
                                   ) : (
-                                    <></>
-                                  )}
-
-                                  <div style={{ width: "400px" }}>
-                                    <a onClick={modalOpen}>
-                                      고양이.jpeg 300kb 2022.0508 오전 02:41
-                                      <hr/>
-                                    </a>
-                                  </div>
-                                </div>
-                              ))}
-=======
                                     <input
                                       type="checkbox"
                                       style={{
@@ -584,7 +438,6 @@ function Main() {
                                   </div>
                                 </div>
                               ))}
->>>>>>> 10fd351c728e20a6161603d42a239d683eea0649
                             </div>
                           )}
 
