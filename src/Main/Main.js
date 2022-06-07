@@ -205,7 +205,7 @@ function Main() {
         <div className="Main">
           <div className="MenuList">
               <div className="Logo">
-                <img className="L" src={require("../LogoImage.jpeg")} />
+                <img className="L2" src={require("../LogoImage.jpeg")} />
               </div>
             <Link to="/a">
               <div className="MenuUserIcon">
@@ -336,7 +336,7 @@ function Main() {
                        <option value="B">오래된순</option>
                       </select>
                     </div>
-                    <div onClick={() => showPicture(false)}>
+                  <div onClick={() => showPicture(false)}>
                     <BsListUl size={25} />
                   </div>
                   <div onClick={() => showPicture(true)}>
@@ -426,6 +426,7 @@ function Main() {
                                 </div>
                               ))}
                             </div>
+                            
                           ) : (
                             <div
                               className="ImageGrid"
