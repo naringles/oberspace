@@ -12,9 +12,11 @@ import Main from "../Main/index";
 import styled from "styled-components";
 import Login from "../Login";
 import SignUp from "../SignUp/SignUp";
+import F_Login from "../F_Login/F_Login"
 import Compare from "../Compare";
 import Swal from "sweetalert2";
 import { data1 } from "../data";
+import swal from "sweetalert";
 
 class Rr extends Component {
   constructor(props) {
@@ -73,6 +75,7 @@ class Rr extends Component {
     console.log(data);
   };
 
+  
   render() {
     return (
       <BrowserRouter>
@@ -100,6 +103,7 @@ class Rr extends Component {
               ></App>
             }
           ></Route>
+          <Route path="/F_Login" element={<F_Login></F_Login>}></Route>
           <Route path="/Login" element={<Login></Login>}></Route>
           <Route path="/SignUp" element={<SignUp></SignUp>}></Route>
           <Route path="/Compare" element={<Compare></Compare>}></Route>
@@ -121,7 +125,7 @@ const LeftMain = styled.div`
 `;
 
 const MenuUserIcon = styled.div`
-  margin-top: 15vh;
+  margin-top: 8vh;
   background-color: #eeeeee;
   border-radius: 15px;
 `;
@@ -178,7 +182,7 @@ function App() {
           <div className="Left">
             <div className="MenuList">
               <div className="Logo">
-                <img className="L" src={require("../LogoImage.jpeg")} />
+                <img className="L3" src={require("../LogoImage.jpeg")} />
               </div>
               <MenuUserIcon>
                 <AiOutlineUser size="40" color="gray" className="AB" />
@@ -215,6 +219,29 @@ function App() {
               </div>
               <div className="DeleteAccount">
                 <span className="DeleteAccountText">계정 탈퇴</span>
+              </div>
+              <div>
+                <br/><br/>
+                <span onClick={function() {
+	              	swal({
+                    title: "로그아웃 하시겠습니까?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                  })
+                  .then((willLogout) => {
+                    if (willLogout) {
+                      swal("로그아웃 완료!", {
+                      icon: "success",
+                    })
+                    .then(()=>{
+                      window.location.replace('/Login');
+                    });
+                    } else {
+                        swal("로그아웃 취소!");
+                    }
+                  });
+	                }}>로그아웃</span>
               </div>
             </LeftMain>
           </div>

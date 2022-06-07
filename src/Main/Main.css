@@ -108,6 +108,9 @@ section {
 
 body {
   line-height: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
 }
 
 ol,
@@ -361,7 +364,7 @@ progress {
   background-color: #ececec;
 }
 
-.L {
+.L2 {
   width: 3.5vw;
   height: 3.5vh;
   margin-bottom: 2vh;
