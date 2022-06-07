@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
+import { debounce } from 'lodash';
 import "./Main.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineFolder } from "react-icons/ai";
@@ -55,6 +56,29 @@ function Main() {
   let three = true;
   const [picture, setPicture] = useState(false);
   const [line, setLine]=useState(true);
+
+  const ResizedComponent = () => {
+    const[windowSize, setWindowSize] = useState({
+      width: window.innerWidth,
+      height: window. innerHeight
+    })
+ 
+  const handleResize = debounce(() => {
+    setWindowSize({
+      width:window.innerWidth,
+      height: window. innerHeight
+    });
+  },1000);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  },[]);
+  return <div>브라우저 화면 사이즈 {window.width}, y: {window.height}</div>
+}
+
 
   const [checked, setChecked] = useState([
     { id: 0, bool: false },
@@ -181,7 +205,7 @@ function Main() {
         <div className="Main">
           <div className="MenuList">
               <div className="Logo">
-                <img className="L" src={require("../LogoImage.jpeg")} />
+                <img className="L2" src={require("../LogoImage.jpeg")} />
               </div>
             <Link to="/a">
               <div className="MenuUserIcon">
@@ -312,7 +336,7 @@ function Main() {
                        <option value="B">오래된순</option>
                       </select>
                     </div>
-                    <div onClick={() => showPicture(false)}>
+                  <div onClick={() => showPicture(false)}>
                     <BsListUl size={25} />
                   </div>
                   <div onClick={() => showPicture(true)}>
@@ -402,6 +426,7 @@ function Main() {
                                 </div>
                               ))}
                             </div>
+                            
                           ) : (
                             <div
                               className="ImageGrid"

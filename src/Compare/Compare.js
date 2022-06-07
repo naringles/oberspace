@@ -19,7 +19,7 @@ render() {
   return (
     <div className="MenuList">
     <div className="Logo">
-      <img className="L" src={require("../LogoImage.jpeg")} />
+      <img className="L5" src={require("../LogoImage.jpeg")} />
     </div>
     <Link to ="/a">
       <div className='MenuUserIcon'>

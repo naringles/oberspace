@@ -125,7 +125,7 @@ const LeftMain = styled.div`
 `;
 
 const MenuUserIcon = styled.div`
-  margin-top: 15vh;
+  margin-top: 8vh;
   background-color: #eeeeee;
   border-radius: 15px;
 `;
@@ -182,7 +182,7 @@ function App() {
           <div className="Left">
             <div className="MenuList">
               <div className="Logo">
-                <img className="L" src={require("../LogoImage.jpeg")} />
+                <img className="L3" src={require("../LogoImage.jpeg")} />
               </div>
               <MenuUserIcon>
                 <AiOutlineUser size="40" color="gray" className="AB" />
