@@ -1,1 +1,8 @@
+# mongoDB URI이 저장되어 있는 파일.
+# server/config에 생성하면 됨.
+dev.js
+
+# npm i --save로 설치하면됨.
+# 기본 root 폴더와, client 폴더에 한번씩 해줄것.
+# client 폴더로 변환하는법은 터미널에서 cd client
 node_modules

@@ -1,51 +1,39 @@
 {
-  "name": "oberspace",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "@sweetalert/with-react": "^0.1.1",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/react": "^18.0.9",
-    "expres": "^0.0.5",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.2.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
-    "react": "^18.1.0",
-    "react-bootstrap": "^2.3.1",
-    "react-bootstrap-select": "^0.14.0",
-    "react-dom": "^18.1.0",
-    "react-dropdown": "^1.10.0",
-    "react-icons": "^4.3.1",
-    "react-modal": "^3.15.1",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "styled-components": "^5.3.5",
-    "sweetalert": "^2.1.2",
-    "sweetalert2": "^11.4.17",
-    "web-vitals": "^2.1.0"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.5"
+  },
+  "name": "season2_security_react_test",
+  "description": "TEST PAGE of Season2_Security_React",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engine": {
+    "node": "v16.13.2",
+    "npm": "8.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node ./server/index.js",
+    "nodemon": "nodemon ./server/index.js",
+    "test": "echo \"Error:no test specified\" && exit 1",
+    "dev": "concurrently \"npm run nodemon\" \"npm run start --prefix client\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JHKkmu/Season2_Security_React_test.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "JHKkmu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JHKkmu/Season2_Security_React_TEST/issues"
+  },
+  "homepage": "https://github.com/JHKkmu/Season2_Security_React_TEST#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
