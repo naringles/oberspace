@@ -63,9 +63,10 @@ app.post('/api/users/login',(req,res) => {
         user.generateToken((err, user) => {
           //jsonwebtoken 활용
           if(err) return res.status(400).send(err);
-          // 토큰을 저장한다. 어디에? -> 여러곳 가능 [쿠키, 세션, 로컬스토리지]
-          // 어디가 가장 안전한지는 사람마다 다름, 로컬, 쿠키 등등
-          // 여기서는 쿠키 -> 라이브러리 다운로드 필요 (express에서 제공하는 cookie paraser)
+          // 쿠키에 토큰을 저장한다. token 사용.
+          // 1분을 1000으로 계산해서, 곱셈으로 입력해주면 됨.
+          // Date.now()는 현재시간을 UTC 기준으로 정해지며, 쿠키에 저장될때도 한국시간으로 저장되는것이 아니니,
+          // 이 부분은 참고할것.
           res.cookie("Oberspace_Access", user.token, {
             expires: new Date(Date.now() + 1800000),    // 30분 저장
             httpOnly: true                              // XSS 공격 대처방안.
@@ -79,9 +80,20 @@ app.post('/api/users/login',(req,res) => {
 
 // 인증 라우팅
 // role 1 어드민
-// role 0 일반유저
+// role 0 일반유저, 기본은 일반유저인 0로 저장된다.
+// 어드민 계정이 필요하면 따로 DB에 추가하는 방식을 사용할것..
+// 이 부분에서 자동 로그인이 시작된다.
 app.get('/api/users/auth', auth, (req, res) => {  // 미들웨어 (엔드포인트에 req받기 전에 중간에서 별도로 해주는 것)
   // 여기까지 왔다는 얘기는 Authentication이 true라는 말
+  // 이 미들웨어는 client/components/App.js를 시작으로,
+  // 2) hoc/auth.js,
+  // 3) _action/user_actions.js,
+  // 4) _reducers/user_reducer.js,
+  // 5) 여기,
+  // 6) _reducers/types.js,
+  // 7) _reducers/user_reducer.js,
+  // 8) 각 views에 맞는 페이지,
+  // 순으로 이동하니 에러가 난다면 이 부분들을 살펴볼것.
   res.status(200).json({
     _id: req.user._id,
     isAdmin: req.user.role === 0 ? false : true,
