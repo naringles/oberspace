@@ -66,7 +66,10 @@ app.post('/api/users/login',(req,res) => {
           // 토큰을 저장한다. 어디에? -> 여러곳 가능 [쿠키, 세션, 로컬스토리지]
           // 어디가 가장 안전한지는 사람마다 다름, 로컬, 쿠키 등등
           // 여기서는 쿠키 -> 라이브러리 다운로드 필요 (express에서 제공하는 cookie paraser)
-          res.cookie("Oberspace_Access", user.token)
+          res.cookie("Oberspace_Access", user.token, {
+            expires: new Date(Date.now() + 1800000),    // 30분 저장
+            httpOnly: true                              // XSS 공격 대처방안.
+          })
           .status(200)
           .json({ loginSuccess: true, userId: user._id })
         })
