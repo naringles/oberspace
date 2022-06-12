@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css?family=McLaren|Montserrat&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  padding: 0;
+  margin:0;
+  /* background-image: linear-gradient(
+      rgba(22, 49, 54, 0.5),
+      rgba(22, 49, 54, 0.5)
+      
+    ),
+    url("https://www.transparenttextures.com/patterns/grid-me.png"); */
+    /* background-color: #fff; */
+    background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
+    /* color:#fff */
+}
+body,.card,.list-group-item {
+  background-color: rgba(255,255,255, 0.182);
+}
+
+.darkMode{
+  /* position: absolute !important;
+  left:20% !important;
+  top:10%; */
+  font-size: small;
+  color:#fff;
+}
+.modal-header{
+  background-color: #440c05 !important;
+  color: #fff !important;
+}
+
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+.navbar {
+  background-color: #440c05;
+  /* height: 12vh; */
+  /* padding: 2% 0%; */
+  /* margin: 0%;  */
+  
+}
+.nav-tabs{
+  border-color: #440c05 !important;
+}
+.nav-link,.active {
+  border-color: #440c05 !important;
+  background-color: #440c05 !important;
+  color: #fff !important;
+}
+.signUp{
+  background-color: #440c05 !important;
+  color: #fff !important;
+}
+
+
+li .nav-item {
+  background-color: #440c05 !important;
+}
+.MuiInputBase-root{
+  padding: 0% 1% !important;  
+}
+.cardHeader {
+  background-color:#440c05;
+  color:white;
+  text-align:center;
+}
+.cardHeader .uploadButton {
+  background: none;
+  color:#fff;
+  border:none;
+  padding:2%
+}
+.addDrive .card-body {
+  padding: 1% 0 0 0;
+}
+.addDrive ul {
+  text-align: center;
+}
+.addDrive li {
+display: inline-table;
+padding:0 10% 0 10%;
+}
+.prevIconB,.nextIconB
+{
+  background:none;
+  color:#fff;
+  border:none;
+}
+li{
+  cursor: pointer;
+}
+li a {
+  color: inherit;
+}
+.search {
+  position: relative;
+  left:2%;
+  margin-bottom:1rem;  
+}
+
+.search input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.fileFilter {
+  background:none;border:none;color:#ffff;
+}
+
+#dropdown-custom-2 {
+  background-color: #440c05;
+  color: #fff;
+  width:100%;  
+  margin: 0;
+  
+  left:0;
+  right:0;  
+}
+.dropDToggle{
+  background:none;
+  border:none;
+  width:auto;  
+}
+.menuColors{  
+  background-color:#440c05;
+    
+}
+.dropDText{
+  color: #fff;
+  border:0.5px solid rgb(255, 255, 255,0.2);
+}
+
+.fileRow .row {
+  border: 0.5px solid rgba(105, 103, 103, 0.582) !important;  
+  padding: 1% 0%;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 10vw;
+  /* background-color: #440c05; */
+  /* color: #440c05; */
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* position: relative; */
+  z-index: 1;
+  /* top:-5%; */
+  /* left: 5%; */
+  margin-left: 2%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-decoration: none;
+}
+/* .fileRow .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -1%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color:  transparent #440c0569 transparent transparent;
+} */
+
+.fileRow:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  width:10vw;
+  text-decoration: none;
+}
+
+.fileDelete {
+  background: none;
+  color: #1a8e92;
+  border: none;
+}
+
+.upload {
+  width: 100vw !important;
+}
+.driveList li{
+  padding-left: 2% !important;
+}
+.driveList .upload {
+  width:95% !important;
+}
+.driveList .fileDelete
+{
+  padding-top: 2%;
+}
+.progressPct {
+  position: absolute;
+  z-index: 2;
+  left:50%;
+  color:#440c05;
+  font-weight: 600;
+}
+
+/* 
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: -30rem;
+  width: 100%;
+  height: 5vh;
+}
+
+footer p {
+  color: #ccc;
+} */
+
+/* **********Scrollbar section ******/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(77, 82, 80, 0.2);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #440c05;
+}
+/* **********Scrollbar section ******/
