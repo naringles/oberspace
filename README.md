@@ -10,7 +10,7 @@ A cloud world that spreads everywhere
   다만, 통합 스토리지는 대중적이지 않은 개념의 플랫폼이기 때문에 사용자들에게 생소함을 줄 수 있다는 점을 고려하여, 사용자가 최소한의 사용으로 금방 익숙해질 수 있도록 <그림1>의 메인 화면과 다른 서브 페이지들을 최대한 비슷하게 유지하는 방법을 취함으로써 만족스러운 UX(User Experience)가 될 수 있도록 노력하였다.
 
 
-![image](https://github.com/user-attachments/assets/60432f69-13cb-498a-b5f1-a0b9d627b66a)
+![image](https://github.com/user-attachments/assets/60432f69-13cb-498a-b5f1-a0b9d627b66a)  
 다른 스토리지 2개가 연결된 oberspace 메인 화면
 
   기존의 클라우드 스토리지들을 통합하는데 앞서 사용자들이 하나의 스토리지를 사용하는 것처럼 불편함이 없어야 한다는 것이 본 서비스의 이슈였고, 하나의 스토리지처럼 구현하였다.
@@ -27,7 +27,7 @@ A cloud world that spreads everywhere
   2.1 JWT Token
  JWT Token은 Access Token과 Refresh Token을 사용하여 제공된다. 자동 로그인 이전에는 PBKDF2 알고리즘을 통해 ID/PW가 웹 DB에 저장되어있다.
 
-![image](https://github.com/user-attachments/assets/d3c0e7bf-8060-41b7-9bfe-af83c8737862)
+![image](https://github.com/user-attachments/assets/d3c0e7bf-8060-41b7-9bfe-af83c8737862)  
  JWT 동작 방식
 
 최초 로그인 시 발급된 Access 및 Refresh Token을 사용한 방식이다. 브라우저에서 로그인을 요청하면 성공과 실패에 따라 <그림 2>의 방식대로 진행된다.
